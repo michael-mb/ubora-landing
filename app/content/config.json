@@ -1,0 +1,20 @@
+{
+  "component": "config",
+  "_uid": "config",
+  "site_name": "UBORA CAPITAL PARTNER",
+  "navigation": [
+    { "component": "nav-link", "_uid": "nav-vision", "label": "Vision", "link": { "linktype": "url", "url": "/#vision", "cached_url": "/#vision" } },
+    { "component": "nav-link", "_uid": "nav-domaines", "label": "Domaines", "link": { "linktype": "url", "url": "/#domaines", "cached_url": "/#domaines" } },
+    { "component": "nav-link", "_uid": "nav-approche", "label": "Approche", "link": { "linktype": "url", "url": "/#approche", "cached_url": "/#approche" } },
+    { "component": "nav-link", "_uid": "nav-strategie", "label": "Stratégie", "link": { "linktype": "url", "url": "/#strategie", "cached_url": "/#strategie" } },
+    { "component": "nav-link", "_uid": "nav-pourquoi", "label": "Pourquoi Ubora", "link": { "linktype": "url", "url": "/#pourquoi", "cached_url": "/#pourquoi" } }
+  ],
+  "header_cta": [
+    { "component": "button", "_uid": "header-cta", "label": "Nous contacter", "variant": "primary", "link": { "linktype": "url", "url": "/#contact", "cached_url": "/#contact" } }
+  ],
+  "tagline": "Investir dans la santé. Préserver les entreprises. Construire l'avenir.",
+  "footer_text": "Holding d'investissement spécialisée dans le secteur de la santé en Afrique centrale.",
+  "locations": "Allemagne · Cameroun",
+  "phone": "+49 176 75892256",
+  "email": "uboracapital@info.com"
+}

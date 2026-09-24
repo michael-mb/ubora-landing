@@ -1,0 +1,26 @@
+{
+  "name": "ubora-capital-partner",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "dev:https": "nuxt dev --https",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "storyblok:setup": "node --env-file=.env scripts/storyblok-setup.mjs"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^0.14.0",
+    "@storyblok/nuxt": "^11.2.1",
+    "@storyblok/vue": "^11.3.2",
+    "nuxt": "^4.5.2",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.3.11"
+  }
+}
