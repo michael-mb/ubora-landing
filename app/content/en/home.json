@@ -1,0 +1,250 @@
+{
+  "component": "page",
+  "_uid": "page-home",
+  "seo_title": "UBORA CAPITAL PARTNER — Investing in healthcare in Central Africa",
+  "seo_description": "Investment holding company specialising in healthcare in Central Africa. We invest in, support and develop pharmacies, laboratories, health centres and private clinics.",
+  "body": [
+    {
+      "component": "hero",
+      "_uid": "hero",
+      "title": "Building the future of healthcare in Central Africa",
+      "subtitle": "We invest in, support and develop the healthcare facilities shaping tomorrow's access to care.",
+      "text": "UBORA CAPITAL PARTNER is an investment holding company specialising in the healthcare sector in Central Africa. Based between Germany and Cameroon, we support pharmacies, medical laboratories, family health centres and private clinics through their succession, modernisation and growth.",
+      "missions_title": "Our missions",
+      "missions": "Preserve strategic healthcare facilities\nSupport their professionalisation\nFinance their development\nBuild an integrated network of community healthcare",
+      "buttons": [
+        {
+          "component": "button",
+          "_uid": "hero-btn-1",
+          "label": "Discover our approach",
+          "variant": "primary",
+          "link": {
+            "linktype": "url",
+            "url": "#approche",
+            "cached_url": "#approche"
+          }
+        },
+        {
+          "component": "button",
+          "_uid": "hero-btn-2",
+          "label": "Submit an opportunity",
+          "variant": "secondary",
+          "link": {
+            "linktype": "url",
+            "url": "#contact",
+            "cached_url": "#contact"
+          }
+        },
+        {
+          "component": "button",
+          "_uid": "hero-btn-3",
+          "label": "Contact us",
+          "variant": "ghost",
+          "link": {
+            "linktype": "url",
+            "url": "#contact",
+            "cached_url": "#contact"
+          }
+        }
+      ]
+    },
+    {
+      "component": "text-section",
+      "_uid": "vision",
+      "anchor": "vision",
+      "eyebrow": "Our vision",
+      "title": "A strong vision for a sector in full transformation",
+      "text": "Central Africa is experiencing rapid population growth, sustained urbanisation and rising demand for quality healthcare infrastructure. At the same time, many healthcare facilities remain underfunded, insufficiently structured or face succession challenges.\nAt UBORA CAPITAL PARTNER, we believe that improving access to quality care is both a social imperative and one of the region's greatest economic opportunities for the decades ahead.",
+      "theme": "cream"
+    },
+    {
+      "component": "feature-list",
+      "_uid": "defi",
+      "anchor": "defi",
+      "eyebrow": "The challenge we address",
+      "title": "A high-potential but highly fragmented market",
+      "intro": "Every day, many healthcare providers have to deal with:",
+      "lists": [
+        {
+          "component": "list-group",
+          "_uid": "defi-list",
+          "style": "bullet",
+          "items": "Limited access to financing\nInsufficiently formalised governance\nManagement and oversight difficulties\nLack of investment in equipment\nWeak administrative and financial structure\nSuccession and business transfer issues"
+        }
+      ],
+      "outro": "This holds back their development, even though they play an essential role in giving people access to care.",
+      "theme": "light"
+    },
+    {
+      "component": "feature-list",
+      "_uid": "transmission",
+      "anchor": "transmission",
+      "eyebrow": "A unique opportunity",
+      "title": "The succession of healthcare businesses",
+      "intro": "Many pharmacies, medical practices, laboratories and clinics founded several decades ago are now reaching a decisive stage in their history.\nFounders wish to hand over their business, while their heirs do not always have the will or the means to ensure its continuity.",
+      "lists": [
+        {
+          "component": "list-group",
+          "_uid": "transmission-list",
+          "style": "check",
+          "title": "UBORA CAPITAL PARTNER offers a responsible takeover solution that ensures:",
+          "items": "Business continuity\nJob preservation\nProtection of know-how\nContinued access to care for local communities"
+        }
+      ],
+      "theme": "dark"
+    },
+    {
+      "component": "card-grid",
+      "_uid": "domaines",
+      "anchor": "domaines",
+      "eyebrow": "Our investment areas",
+      "title": "We invest in four key segments",
+      "theme": "light",
+      "cards": [
+        {
+          "component": "card",
+          "_uid": "card-pharmacie",
+          "icon": "pharmacy",
+          "title": "Retail pharmacies",
+          "text": "We support pharmacies with a strategic location and strong potential for modernisation, expansion or consolidation."
+        },
+        {
+          "component": "card",
+          "_uid": "card-labo",
+          "icon": "laboratory",
+          "title": "Medical laboratories",
+          "text": "We back facilities that meet the growing demand for reliable, modern and accessible diagnostics."
+        },
+        {
+          "component": "card",
+          "_uid": "card-centre",
+          "icon": "health-center",
+          "title": "Family health centres",
+          "text": "We invest in community facilities facing financing, structuring or succession needs."
+        },
+        {
+          "component": "card",
+          "_uid": "card-clinique",
+          "icon": "clinic",
+          "title": "Private clinics",
+          "text": "We provide the financial and operational resources needed to accelerate their development and strengthen their governance."
+        }
+      ]
+    },
+    {
+      "component": "steps",
+      "_uid": "modele",
+      "anchor": "approche",
+      "eyebrow": "Our model",
+      "title": "Investor-operator",
+      "intro": "Unlike a purely financial investor, we are directly involved in creating value in the companies we support.",
+      "theme": "cream",
+      "steps": [
+        {
+          "component": "step",
+          "_uid": "step-capital",
+          "icon": "capital",
+          "title": "Capital contribution",
+          "intro": "We finance:",
+          "items": "Acquisitions and takeovers of facilities\nThe opening of new sites\nInfrastructure modernisation\nThe purchase of medical equipment\nWorking capital reinforcement\nExternal growth projects"
+        },
+        {
+          "component": "step",
+          "_uid": "step-ops",
+          "icon": "support",
+          "title": "Operational support",
+          "intro": "We help managers to:",
+          "items": "Improve their governance\nStructure their financial management\nImplement management tools\nOptimise their operating processes\nProfessionalise their teams\nStrengthen their regulatory compliance\nPrepare for access to bank financing"
+        }
+      ],
+      "conclusion_label": "Our goal is simple",
+      "conclusion": "To turn under-exploited assets into high-performing, profitable and bankable companies."
+    },
+    {
+      "component": "feature-list",
+      "_uid": "strategie",
+      "anchor": "strategie",
+      "eyebrow": "Our strategy",
+      "title": "Building the first integrated network of community healthcare",
+      "theme": "dark",
+      "lists": [
+        {
+          "component": "list-group",
+          "_uid": "strategie-eco",
+          "style": "number",
+          "title": "We are gradually developing an ecosystem made up of:",
+          "items": "Pharmacies\nMedical laboratories\nHealth centres\nPrivate clinics"
+        },
+        {
+          "component": "list-group",
+          "_uid": "strategie-benefices",
+          "style": "check",
+          "title": "This strategy enables:",
+          "items": "Better pooling of resources\nCost optimisation\nContinuous improvement in the quality of care\nStronger profitability\nGreater appeal to institutional investors"
+        }
+      ]
+    },
+    {
+      "component": "card-grid",
+      "_uid": "pourquoi",
+      "anchor": "pourquoi",
+      "eyebrow": "Why UBORA CAPITAL PARTNER?",
+      "title": "A presence between Europe and Africa",
+      "intro": "Our presence in both Germany and Cameroon allows us to combine international expertise with a thorough understanding of local realities.",
+      "cards_title": "Our strengths",
+      "theme": "light",
+      "cards": [
+        {
+          "component": "card",
+          "_uid": "atout-expertise",
+          "icon": "expertise",
+          "title": "Sector expertise",
+          "text": "An exclusive focus on the healthcare sector."
+        },
+        {
+          "component": "card",
+          "_uid": "atout-terrain",
+          "icon": "field",
+          "title": "Field experience",
+          "text": "A hands-on understanding of the challenges faced by healthcare SMEs."
+        },
+        {
+          "component": "card",
+          "_uid": "atout-reseau",
+          "icon": "network",
+          "title": "International network",
+          "text": "Access to European partners, experts and investors."
+        },
+        {
+          "component": "card",
+          "_uid": "atout-long-terme",
+          "icon": "long-term",
+          "title": "Long-term vision",
+          "text": "We favour sustainable value creation over short-term results."
+        }
+      ]
+    },
+    {
+      "component": "text-section",
+      "_uid": "ambition",
+      "anchor": "ambition",
+      "eyebrow": "UBORA CAPITAL PARTNER",
+      "title": "Our ambition",
+      "text": "We aim to become one of the leading consolidators of the healthcare sector in Central Africa by building a portfolio of complementary, profitable facilities with a strong social impact.\nThrough investment, succession, professionalisation and the development of healthcare businesses, we help to strengthen access to care in a lasting way, while creating value for entrepreneurs, investors and communities.",
+      "theme": "yellow"
+    },
+    {
+      "component": "cta-section",
+      "_uid": "contact",
+      "anchor": "contact",
+      "eyebrow": "Contact",
+      "title": "Do you own a healthcare facility?",
+      "intro": "Are you considering:",
+      "items": "A succession\nA sale\nRaising finance\nA development project",
+      "text": "UBORA CAPITAL PARTNER supports you at every stage of your project.",
+      "closing": "Let's talk about the future of your facility.",
+      "show_form": true,
+      "form_subjects": "Succession\nSale\nFinancing\nDevelopment project\nSubmit an opportunity\nOther enquiry"
+    }
+  ]
+}

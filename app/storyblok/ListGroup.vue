@@ -38,7 +38,6 @@ const style = computed(() => props.blok.style || 'check')
   line-height: 1.45;
 }
 
-/* Puces : cartes en grille */
 .list-group--bullet .list-group__items {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 1rem;
@@ -61,7 +60,6 @@ const style = computed(() => props.blok.style || 'check')
   transform: rotate(45deg);
 }
 
-/* Coches */
 .list-group__check {
   flex: none;
   display: grid;
@@ -85,7 +83,6 @@ const style = computed(() => props.blok.style || 'check')
   border-bottom: 1px solid var(--card-border);
 }
 
-/* Numéros : tuiles */
 .list-group--number .list-group__items {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;

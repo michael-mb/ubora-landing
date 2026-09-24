@@ -19,7 +19,8 @@ app/
   storyblok/            Un composant Vue par bloc Storyblok (enregistrés automatiquement)
   components/           Header, footer, formulaire, icônes, logo
   composables/useCms.ts Chargement Storyblok, avec repli sur le contenu local
-  content/              Contenu local (home.json, config.json)
+  content/fr, content/en  Contenu local par langue (home, pages légales, config)
+  i18n/messages.ts      Textes de l'interface en FR / EN
 storyblok/components.mjs  Schéma de tous les blocs (source de vérité)
 scripts/storyblok-setup.mjs  Crée les blocs et les stories dans Storyblok
 public/brand/           Logos SVG extraits de la présentation, image Open Graph
@@ -32,6 +33,8 @@ public/brand/           Logos SVG extraits de la présentation, image Open Graph
 | `page` | Type de contenu d'une page : sections + SEO |
 | `config` | Story unique « config » : menu, bouton du header, contact, signature, footer |
 | `hero` | Grand titre, texte, missions, boutons |
+| `page-header` | En-tête compact pour les pages secondaires |
+| `rich-text` | Texte riche Storyblok (titres, listes, liens), utilisé pour les pages légales |
 | `text-section` | Titre + paragraphes (thème clair / crème / sombre / jaune) |
 | `feature-list` | Titre, intro, une ou plusieurs `list-group` (coches, numéros, puces), conclusion |
 | `card-grid` | Grille de `card` avec icône |
@@ -63,6 +66,20 @@ Les champs « liste » sont des textarea, avec **un élément par ligne**, ce qu
 
 > Le token est lu **au build**. Après l'avoir ajouté ou modifié, il faut redémarrer le serveur de dev ou relancer le build.
 
+### Traduction anglaise
+
+Le site est bilingue : `/` en français, `/en` en anglais, avec un sélecteur FR / EN dans le header.
+
+- **Contenu** : traduction champ par champ dans Storyblok (une seule story par page). Les champs de texte sont traduisibles ; les ancres, l'e-mail et le téléphone sont partagés entre les langues.
+- **Textes de l'interface** (formulaire, footer, menu, page 404) : `app/i18n/messages.ts`.
+- **Contenu local** (sans Storyblok) : `app/content/fr/` et `app/content/en/`.
+- Les liens internes sont préfixés automatiquement par `/en` sur la version anglaise.
+
+Activer l'anglais dans Storyblok :
+1. *Settings → Internationalization → Add language* : English, code **`en`**.
+2. `npm run storyblok:setup` (sans `--force`) : ajoute les traductions anglaises aux stories existantes, sans toucher au français. Elles sont enregistrées en brouillon.
+3. Vérifier puis publier chaque story dans Storyblok. Dans l'éditeur, le sélecteur de langue en haut permet de passer à la version anglaise.
+
 ### Ajouter une page
 
 Dans Storyblok : *Content → Create new → Story*, type **Page**, slug `a-propos`, par exemple. Elle est servie sur `/a-propos` sans aucun changement de code. Pour l'ajouter au menu, il suffit d'ajouter un `nav-link` dans la story **config**.
@@ -93,5 +110,5 @@ En production, utiliser le token **Public** de Storyblok et `NUXT_PUBLIC_STORYBL
 
 - **E-mail et téléphone** : repris de la carte de visite (`uboracapital@info.com`, `+49 176 75892256`). L'adresse e-mail est à confirmer.
 - **Nom de domaine** : `NUXT_PUBLIC_SITE_URL`, utilisé pour les balises canonical et Open Graph.
-- **Mentions légales / Impressum et politique de confidentialité** : obligatoires pour une société basée en Allemagne. Elles pourront être créées comme pages Storyblok, puis liées dans le footer.
+- **Mentions légales et politique de confidentialité** (`/mentions-legales`, `/politique-de-confidentialite`) : les champs marqués `[À COMPLÉTER : …]` sont à remplir (forme juridique, adresse, registre, TVA, hébergeur, autorité de contrôle…). Ces textes sont des modèles et doivent être relus par un juriste. Pour une société allemande, une version allemande de l'Impressum est recommandée.
 - Photos éventuelles : le design actuel repose uniquement sur la charte (formes du « U », couleurs), sans visuels.

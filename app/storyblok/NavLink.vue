@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{ blok: Record<string, any> }>()
-const href = computed(() => linkHref(props.blok.link))
+const { localePath } = useLocale()
+const href = computed(() => localePath(linkHref(props.blok.link)))
 </script>
 
 <template>

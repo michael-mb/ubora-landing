@@ -7,12 +7,10 @@ export interface StoryblokLink {
   target?: '_blank' | '_self'
 }
 
-/** Découpe un champ textarea Storyblok en lignes non vides (listes, paragraphes). */
 export function toLines(text?: string): string[] {
   return (text ?? '').split(/\r?\n/).map(line => line.trim()).filter(Boolean)
 }
 
-/** Convertit un champ multilink Storyblok en URL utilisable par NuxtLink. */
 export function linkHref(link?: StoryblokLink): string {
   if (!link) return '#'
 

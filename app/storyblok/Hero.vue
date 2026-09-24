@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{ blok: Record<string, any> }>()
 const missions = computed(() => toLines(props.blok.missions))
+const { t } = useLocale()
 </script>
 
 <template>
@@ -20,7 +21,7 @@ const missions = computed(() => toLines(props.blok.missions))
       </div>
 
       <aside v-if="missions.length" class="hero__missions" aria-labelledby="missions-title">
-        <h2 id="missions-title" class="eyebrow">{{ blok.missions_title || 'Nos missions' }}</h2>
+        <h2 id="missions-title" class="eyebrow">{{ blok.missions_title || t.missions }}</h2>
         <ol>
           <li v-for="(mission, i) in missions" :key="i">
             <span class="hero__num">{{ String(i + 1).padStart(2, '0') }}</span>

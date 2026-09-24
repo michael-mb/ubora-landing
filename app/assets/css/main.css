@@ -1,10 +1,9 @@
-/* ─── Charte UBORA (cf. docs/Ubora logo presentation.pdf) ───────────── */
 :root {
-  --yellow: #efc100;       /* Classy Yellow */
-  --gold: #a08100;         /* Golden Yellow */
-  --gold-text: #7a6300;    /* Golden Yellow assombri pour le texte sur fond clair (contraste AA) */
-  --brown: #443700;        /* Capital Brown */
-  --black: #000;           /* Premium Black */
+  --yellow: #efc100;
+  --gold: #a08100;
+  --gold-text: #7a6300;
+  --brown: #443700;
+  --black: #000;
 
   --ink: #1c1a14;
   --ink-muted: #5c574a;
@@ -72,7 +71,6 @@ img, svg { display: block; max-width: 100%; }
   white-space: nowrap;
 }
 
-/* ─── Sections & thèmes ─────────────────────────────────────────────── */
 .section {
   position: relative;
   padding-block: clamp(4.5rem, 9vw, 8rem);
@@ -162,7 +160,6 @@ img, svg { display: block; max-width: 100%; }
 
 .section-intro + .section-intro { margin-top: 0.9rem; }
 
-/* ─── Boutons ───────────────────────────────────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -217,7 +214,6 @@ img, svg { display: block; max-width: 100%; }
 .theme-dark { --section-bg-solid: var(--night); }
 .theme-yellow { --section-bg-solid: var(--yellow); }
 
-/* ─── Apparition au scroll (CSS uniquement, amélioration progressive) ─ */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .reveal {

@@ -1,0 +1,361 @@
+{
+  "component": "page",
+  "_uid": "page-Legal notice",
+  "seo_title": "Legal notice — UBORA CAPITAL PARTNER",
+  "seo_description": "Legal notice (Impressum) of the UBORA CAPITAL PARTNER website.",
+  "body": [
+    {
+      "component": "page-header",
+      "_uid": "header",
+      "eyebrow": "Legal information",
+      "title": "Legal notice",
+      "intro": "Impressum — information provided in accordance with § 5 of the German Digital Services Act (DDG)."
+    },
+    {
+      "component": "rich-text",
+      "_uid": "content",
+      "content": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Publisher"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "UBORA CAPITAL PARTNER",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " [TO BE COMPLETED: legal form, e.g. GmbH or UG (haftungsbeschränkt)]"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "[TO BE COMPLETED: street and number]"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "[TO BE COMPLETED: postcode and city]"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "Germany"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Represented by:",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " Aristide Tonfack, [TO BE COMPLETED: legal role, e.g. Geschäftsführer (Managing Director)]"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Contact"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Phone: +49 176 75892256"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "Email: "
+              },
+              {
+                "type": "text",
+                "text": "uboracapital@info.com",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "mailto:uboracapital@info.com",
+                      "linktype": "email",
+                      "target": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Commercial register"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Entry in the commercial register (Handelsregister)"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "Registry court: [TO BE COMPLETED: Amtsgericht …]"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "Registration number: [TO BE COMPLETED: HRB …]"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "VAT number"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "VAT identification number pursuant to § 27 a of the German VAT Act (UStG): [TO BE COMPLETED: DE … — remove if not applicable]"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Presence in Cameroon"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "[TO BE COMPLETED: company name, address and RCCM number of the Cameroonian entity, if applicable]"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Responsible for content"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Responsible for content within the meaning of § 18 (2) of the German Interstate Media Treaty (MStV):"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "Aristide Tonfack, same address as the publisher."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Dispute resolution"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "We are neither willing nor obliged to take part in dispute resolution proceedings before a consumer arbitration board."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Liability for content"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The content of this website has been prepared with the greatest care. However, we cannot guarantee that the information published is accurate, complete or up to date. The information on this website does not constitute an investment offer, nor financial, legal or tax advice."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "As a service provider, we are responsible for our own content on these pages in accordance with general law. We are not, however, obliged to monitor third-party information that is transmitted or stored, or to investigate circumstances that indicate illegal activity. As soon as we become aware of a specific legal infringement, we will remove the content concerned."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Liability for links"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Our website may contain links to external third-party websites whose content we have no control over. The provider or operator of those pages is always responsible for their content. If we become aware of any infringement, we will remove the links concerned immediately."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Copyright"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The content and works published on this website (texts, logo, graphic elements) are protected by copyright. Any reproduction, modification, distribution or use beyond the limits of copyright law requires the prior written consent of UBORA CAPITAL PARTNER."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Credits"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Visual identity: Adams Designer"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "Hosting: [TO BE COMPLETED: name and address of the hosting provider]"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

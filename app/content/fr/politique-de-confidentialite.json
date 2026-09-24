@@ -1,0 +1,564 @@
+{
+  "component": "page",
+  "_uid": "page-Politique de confidentialité",
+  "seo_title": "Politique de confidentialité — UBORA CAPITAL PARTNER",
+  "seo_description": "Comment UBORA CAPITAL PARTNER traite vos données personnelles sur ce site, conformément au RGPD.",
+  "body": [
+    {
+      "component": "page-header",
+      "_uid": "header",
+      "eyebrow": "Informations légales",
+      "title": "Politique de confidentialité",
+      "intro": "La protection de vos données personnelles est importante pour nous. Cette page explique quelles données sont traitées lorsque vous utilisez ce site, et quels sont vos droits au titre du Règlement général sur la protection des données (RGPD)."
+    },
+    {
+      "component": "rich-text",
+      "_uid": "content",
+      "content": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "1. Responsable du traitement"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "UBORA CAPITAL PARTNER",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " [À COMPLÉTER : forme juridique, ex. GmbH ou UG (haftungsbeschränkt)]"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "[À COMPLÉTER : rue et numéro]"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "[À COMPLÉTER : code postal et ville]"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "Allemagne"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "Téléphone : +49 176 75892256"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "E-mail : "
+              },
+              {
+                "type": "text",
+                "text": "uboracapital@info.com",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "mailto:uboracapital@info.com",
+                      "linktype": "email",
+                      "target": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Délégué à la protection des données : [À COMPLÉTER : coordonnées si un délégué a été désigné, sinon supprimer cette ligne]"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "2. Hébergement et journaux du serveur"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Ce site est hébergé par [À COMPLÉTER : nom, adresse et pays de l'hébergeur]. Lors de chaque visite, le serveur enregistre automatiquement des informations techniques transmises par votre navigateur :"
+              }
+            ]
+          },
+          {
+            "type": "bullet_list",
+            "content": [
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "adresse IP"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "date et heure de la requête"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "page consultée et page de provenance"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "type et version du navigateur, système d'exploitation"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Ces données sont nécessaires pour afficher le site et garantir sa sécurité et sa stabilité. Base légale : art. 6, par. 1, point f) du RGPD (intérêt légitime). Elles sont supprimées après [À COMPLÉTER : durée, ex. 7 jours]. Un contrat de sous-traitance a été conclu avec l'hébergeur (art. 28 RGPD)."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "3. Système de gestion de contenu (Storyblok)"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Le contenu de ce site est géré avec Storyblok, un service de Storyblok GmbH (Linz, Autriche). Lors de la navigation, votre navigateur peut charger des contenus et des images directement depuis les serveurs de Storyblok, qui reçoivent alors votre adresse IP. Base légale : art. 6, par. 1, point f) du RGPD (intérêt légitime à une présentation efficace du site). Plus d'informations : "
+              },
+              {
+                "type": "text",
+                "text": "storyblok.com/legal/privacy-policy",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "https://www.storyblok.com/legal/privacy-policy",
+                      "linktype": "url",
+                      "target": "_blank"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "4. Polices de caractères"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Les polices utilisées sur ce site sont hébergées directement sur notre serveur. Aucune connexion n'est établie avec des serveurs tiers (par exemple Google Fonts) pour les charger."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "5. Cookies et mesure d'audience"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Ce site n'utilise pas de cookies de suivi ni d'outil de mesure d'audience ou de publicité. Aucun profil d'utilisateur n'est créé."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "6. Prise de contact"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Lorsque vous nous contactez par le formulaire, par e-mail ou par téléphone, nous traitons les données que vous nous communiquez (nom, établissement, coordonnées, objet et contenu du message) afin de traiter votre demande et d'y répondre."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Base légale : art. 6, par. 1, point b) du RGPD lorsque votre demande est liée à un projet de collaboration ou à des mesures précontractuelles, et art. 6, par. 1, point a) du RGPD (consentement) dans les autres cas. Vous pouvez retirer votre consentement à tout moment."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Par défaut, le formulaire ouvre votre logiciel de messagerie : le message nous est alors envoyé par votre propre fournisseur de messagerie. [À COMPLÉTER : si un service d'envoi de formulaire est activé (ex. Formspree), indiquer son nom, son siège et les garanties de transfert hors UE]"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Vos données sont conservées aussi longtemps que nécessaire au traitement de votre demande, puis supprimées, sauf obligation légale de conservation (notamment commerciale ou fiscale)."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "7. Destinataires et transferts"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Vos données ne sont ni vendues ni cédées à des tiers. Elles ne sont communiquées qu'aux prestataires nécessaires au fonctionnement du site (hébergement, gestion de contenu), dans le cadre de contrats de sous-traitance. Si une demande concerne un projet au Cameroun, les informations peuvent être partagées avec notre équipe sur place, dans la mesure nécessaire au traitement de votre demande."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "8. Vos droits"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Vous disposez à tout moment des droits suivants concernant vos données :"
+              }
+            ]
+          },
+          {
+            "type": "bullet_list",
+            "content": [
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "droit d'accès (art. 15 RGPD)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "droit de rectification (art. 16 RGPD)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "droit à l'effacement (art. 17 RGPD)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "droit à la limitation du traitement (art. 18 RGPD)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "droit à la portabilité des données (art. 20 RGPD)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "droit d'opposition au traitement fondé sur l'intérêt légitime (art. 21 RGPD)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "droit de retirer votre consentement à tout moment, sans effet sur la licéité du traitement antérieur (art. 7, par. 3 RGPD)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Pour exercer ces droits, écrivez-nous à "
+              },
+              {
+                "type": "text",
+                "text": "uboracapital@info.com",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "mailto:uboracapital@info.com",
+                      "linktype": "email",
+                      "target": null
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Vous avez également le droit d'introduire une réclamation auprès d'une autorité de contrôle (art. 77 RGPD), notamment celle de votre lieu de résidence ou celle dont nous relevons : [À COMPLÉTER : autorité de protection des données du Land du siège]."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "9. Sécurité"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Ce site utilise un chiffrement SSL/TLS pour protéger les données transmises. Vous le reconnaissez à l'adresse commençant par « https:// » et au cadenas dans la barre du navigateur."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "10. Modification de cette politique"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Nous pouvons adapter cette politique de confidentialité pour tenir compte de l'évolution du site ou de la réglementation. La version en vigueur est celle publiée sur cette page."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Dernière mise à jour : septembre 2026"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

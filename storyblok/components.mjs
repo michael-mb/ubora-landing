@@ -1,7 +1,3 @@
-// Schéma des blocs Storyblok — source unique utilisée par scripts/storyblok-setup.mjs.
-// Chaque bloc correspond à un composant Vue dans app/storyblok (text-section → TextSection.vue).
-// Noms techniques en kebab-case : @storyblok/vue ne résout pas correctement les underscores.
-// Les champs « liste » sont des textarea : un élément par ligne.
 
 const themeField = {
   type: 'option',
@@ -31,12 +27,11 @@ const iconField = {
   ].map(value => ({ name: value, value })),
 }
 
-const sectionPages = ['hero', 'text-section', 'feature-list', 'card-grid', 'steps', 'cta-section']
+const sectionPages = ['hero', 'page-header', 'text-section', 'rich-text', 'feature-list', 'card-grid', 'steps', 'cta-section']
 
 export const groups = ['Pages', 'Sections', 'Éléments']
 
 export const components = [
-  // ─── Types de contenu ────────────────────────────────────────────────
   {
     name: 'page',
     display_name: 'Page',
@@ -61,13 +56,13 @@ export const components = [
       header_cta: { type: 'bloks', display_name: 'Bouton du header', maximum: 1, restrict_components: true, component_whitelist: ['button'] },
       tagline: { type: 'textarea', display_name: 'Signature institutionnelle' },
       footer_text: { type: 'textarea', display_name: 'Texte du footer' },
+      legal_links: { type: 'bloks', display_name: 'Liens légaux (footer)', restrict_components: true, component_whitelist: ['nav-link'] },
       locations: { type: 'text', display_name: 'Implantations' },
       phone: { type: 'text', display_name: 'Téléphone' },
       email: { type: 'text', display_name: 'E-mail' },
     },
   },
 
-  // ─── Sections ───────────────────────────────────────────────────────
   {
     name: 'hero',
     display_name: 'Hero',
@@ -80,6 +75,27 @@ export const components = [
       missions_title: { type: 'text', display_name: 'Titre des missions' },
       missions: { type: 'textarea', display_name: 'Missions (une par ligne)' },
       buttons: { type: 'bloks', display_name: 'Boutons', restrict_components: true, component_whitelist: ['button'] },
+    },
+  },
+  {
+    name: 'page-header',
+    display_name: 'En-tête de page',
+    group: 'Sections',
+    is_nestable: true,
+    schema: {
+      eyebrow: { type: 'text', display_name: 'Sur-titre' },
+      title: { type: 'text', display_name: 'Titre' },
+      intro: { type: 'textarea', display_name: 'Introduction' },
+    },
+  },
+  {
+    name: 'rich-text',
+    display_name: 'Texte riche',
+    group: 'Sections',
+    is_nestable: true,
+    schema: {
+      anchor: anchorField,
+      content: { type: 'richtext', display_name: 'Contenu' },
     },
   },
   {
@@ -159,7 +175,6 @@ export const components = [
     },
   },
 
-  // ─── Éléments ───────────────────────────────────────────────────────
   {
     name: 'button',
     display_name: 'Bouton',

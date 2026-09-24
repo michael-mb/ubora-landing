@@ -1,0 +1,97 @@
+{
+  "component": "config",
+  "_uid": "config",
+  "site_name": "UBORA CAPITAL PARTNER",
+  "navigation": [
+    {
+      "component": "nav-link",
+      "_uid": "nav-vision",
+      "label": "Vision",
+      "link": {
+        "linktype": "url",
+        "url": "/#vision",
+        "cached_url": "/#vision"
+      }
+    },
+    {
+      "component": "nav-link",
+      "_uid": "nav-domaines",
+      "label": "Sectors",
+      "link": {
+        "linktype": "url",
+        "url": "/#domaines",
+        "cached_url": "/#domaines"
+      }
+    },
+    {
+      "component": "nav-link",
+      "_uid": "nav-approche",
+      "label": "Approach",
+      "link": {
+        "linktype": "url",
+        "url": "/#approche",
+        "cached_url": "/#approche"
+      }
+    },
+    {
+      "component": "nav-link",
+      "_uid": "nav-strategie",
+      "label": "Strategy",
+      "link": {
+        "linktype": "url",
+        "url": "/#strategie",
+        "cached_url": "/#strategie"
+      }
+    },
+    {
+      "component": "nav-link",
+      "_uid": "nav-pourquoi",
+      "label": "Why Ubora",
+      "link": {
+        "linktype": "url",
+        "url": "/#pourquoi",
+        "cached_url": "/#pourquoi"
+      }
+    }
+  ],
+  "header_cta": [
+    {
+      "component": "button",
+      "_uid": "header-cta",
+      "label": "Contact us",
+      "variant": "primary",
+      "link": {
+        "linktype": "url",
+        "url": "/#contact",
+        "cached_url": "/#contact"
+      }
+    }
+  ],
+  "legal_links": [
+    {
+      "component": "nav-link",
+      "_uid": "legal-mentions",
+      "label": "Legal notice",
+      "link": {
+        "linktype": "url",
+        "url": "/mentions-legales",
+        "cached_url": "/mentions-legales"
+      }
+    },
+    {
+      "component": "nav-link",
+      "_uid": "legal-privacy",
+      "label": "Privacy policy",
+      "link": {
+        "linktype": "url",
+        "url": "/politique-de-confidentialite",
+        "cached_url": "/politique-de-confidentialite"
+      }
+    }
+  ],
+  "tagline": "Investing in healthcare. Preserving businesses. Building the future.",
+  "footer_text": "Investment holding company specialising in the healthcare sector in Central Africa.",
+  "locations": "Germany · Cameroon",
+  "phone": "+49 176 75892256",
+  "email": "uboracapital@info.com"
+}

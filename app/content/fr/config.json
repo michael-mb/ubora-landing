@@ -12,6 +12,10 @@
   "header_cta": [
     { "component": "button", "_uid": "header-cta", "label": "Nous contacter", "variant": "primary", "link": { "linktype": "url", "url": "/#contact", "cached_url": "/#contact" } }
   ],
+  "legal_links": [
+    { "component": "nav-link", "_uid": "legal-mentions", "label": "Mentions légales", "link": { "linktype": "url", "url": "/mentions-legales", "cached_url": "/mentions-legales" } },
+    { "component": "nav-link", "_uid": "legal-privacy", "label": "Politique de confidentialité", "link": { "linktype": "url", "url": "/politique-de-confidentialite", "cached_url": "/politique-de-confidentialite" } }
+  ],
   "tagline": "Investir dans la santé. Préserver les entreprises. Construire l'avenir.",
   "footer_text": "Holding d'investissement spécialisée dans le secteur de la santé en Afrique centrale.",
   "locations": "Allemagne · Cameroun",

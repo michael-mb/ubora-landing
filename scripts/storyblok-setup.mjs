@@ -1,12 +1,4 @@
 #!/usr/bin/env node
-// Initialise un espace Storyblok via la Management API :
-//   1. crée / met à jour les blocs définis dans storyblok/components.mjs
-//   2. crée les stories « home » et « config » à partir du contenu local (app/content)
-//
-// Usage :  npm run storyblok:setup            (n'écrase pas les stories existantes)
-//          npm run storyblok:setup -- --force (remplace le contenu de home et config)
-//
-// Variables requises dans .env : STORYBLOK_SPACE_ID, STORYBLOK_PERSONAL_TOKEN (+ NUXT_STORYBLOK_REGION)
 
 import { randomUUID } from 'node:crypto'
 import { readFile } from 'node:fs/promises'
@@ -16,6 +8,10 @@ const SPACE_ID = process.env.STORYBLOK_SPACE_ID
 const TOKEN = process.env.STORYBLOK_PERSONAL_TOKEN
 const REGION = process.env.NUXT_STORYBLOK_REGION || 'eu'
 const FORCE = process.argv.includes('--force')
+const TRANSLATION_LANG = 'en'
+const NOT_TRANSLATABLE = new Set(['anchor', 'phone', 'email', 'site_name'])
+const TRANSLATABLE_TYPES = new Set(['text', 'textarea', 'richtext'])
+const schemas = Object.fromEntries(components.map(c => [c.name, c.schema]))
 
 const HOSTS = {
   eu: 'https://mapi.storyblok.com',
@@ -34,17 +30,19 @@ const base = `${HOSTS[REGION] ?? HOSTS.eu}/v1/spaces/${SPACE_ID}`
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 async function api(method, path, body) {
-  await sleep(350) // limite de débit de la Management API
+  await sleep(350)
   const res = await fetch(`${base}${path}`, {
     method,
     headers: { 'Authorization': TOKEN, 'Content-Type': 'application/json' },
     body: body ? JSON.stringify(body) : undefined,
   })
+  if (res.status === 401) {
+    throw new Error('401 : STORYBLOK_PERSONAL_TOKEN refusé. Il faut un Personal Access Token (My account → Personal access tokens), pas le token Preview/Public de l\'espace.')
+  }
   if (!res.ok) throw new Error(`${method} ${path} → ${res.status} ${await res.text()}`)
   return res.status === 204 ? null : res.json()
 }
 
-/** Storyblok attend un _uid unique par bloc. */
 function withUids(node) {
   if (Array.isArray(node)) return node.map(withUids)
   if (node && typeof node === 'object') {
@@ -55,9 +53,43 @@ function withUids(node) {
   return node
 }
 
-/** Ajoute `pos` aux champs pour conserver l'ordre dans l'éditeur. */
-function withPositions(schema) {
-  return Object.fromEntries(Object.entries(schema).map(([key, field], pos) => [key, { ...field, pos }]))
+function isTranslatable(key, field) {
+  return TRANSLATABLE_TYPES.has(field.type) && !NOT_TRANSLATABLE.has(key)
+}
+
+function prepareSchema(schema) {
+  return Object.fromEntries(Object.entries(schema).map(([key, field], pos) => [
+    key,
+    { ...field, pos, ...(isTranslatable(key, field) ? { translatable: true } : {}) },
+  ]))
+}
+
+function withTranslations(node, translated) {
+  if (Array.isArray(node)) {
+    return node.map((item, i) => withTranslations(item, translated?.[i]?.component === item?.component ? translated[i] : undefined))
+  }
+  if (!node || typeof node !== 'object' || !('component' in node)) return node
+
+  const schema = schemas[node.component] ?? {}
+  const result = { ...node }
+  for (const [key, field] of Object.entries(schema)) {
+    if (field.type === 'bloks') result[key] = withTranslations(node[key], translated?.[key])
+    else if (isTranslatable(key, field) && translated?.[key] !== undefined) {
+      result[`${key}__i18n__${TRANSLATION_LANG}`] = translated[key]
+    }
+  }
+  return result
+}
+
+async function readContent(locale, file) {
+  return JSON.parse(await readFile(new URL(`../app/content/${locale}/${file}`, import.meta.url), 'utf8'))
+}
+
+async function checkLanguage() {
+  const { space } = await api('GET', '')
+  if (Array.isArray(space?.languages) && !space.languages.some(l => l.code === TRANSLATION_LANG)) {
+    console.warn(`  ⚠ La langue « ${TRANSLATION_LANG} » n'est pas encore ajoutée dans Settings → Internationalization : les traductions ne seront pas servies tant qu'elle n'existe pas.`)
+  }
 }
 
 async function setupGroups() {
@@ -80,7 +112,7 @@ async function setupComponents(groupUuids) {
     const payload = {
       component: {
         ...definition,
-        schema: withPositions(schema),
+        schema: prepareSchema(schema),
         component_group_uuid: groupUuids[group],
       },
     }
@@ -97,15 +129,19 @@ async function setupComponents(groupUuids) {
 }
 
 async function setupStory({ name, slug, file, path }) {
-  const content = withUids(JSON.parse(await readFile(new URL(`../app/content/${file}`, import.meta.url), 'utf8')))
+  const translated = await readContent(TRANSLATION_LANG, file)
   const { stories } = await api('GET', `/stories?with_slug=${slug}`)
   const current = stories[0]
 
   if (current && !FORCE) {
-    console.log(`  = « ${slug} » existe déjà (relancer avec --force pour l'écraser)`)
+    const { story: existing } = await api('GET', `/stories/${current.id}`)
+    const content = withTranslations(existing.content, translated)
+    await api('PUT', `/stories/${current.id}`, { story: { content }, force_update: 1 })
+    console.log(`  ↻ « ${slug} » : traductions ${TRANSLATION_LANG.toUpperCase()} ajoutées (brouillon, à publier dans Storyblok)`)
     return
   }
 
+  const content = withTranslations(withUids(await readContent('fr', file)), translated)
   const story = { name, slug, content, ...(path ? { path } : {}) }
   if (current) {
     await api('PUT', `/stories/${current.id}`, { story, publish: 1, force_update: 1 })
@@ -119,12 +155,15 @@ async function setupStory({ name, slug, file, path }) {
 
 try {
   console.log(`Espace ${SPACE_ID} (${REGION})`)
+  await checkLanguage()
   console.log('→ Groupes de blocs')
   const groupUuids = await setupGroups()
   console.log('→ Blocs')
   await setupComponents(groupUuids)
   console.log('→ Stories')
   await setupStory({ name: 'Accueil', slug: 'home', file: 'home.json', path: '/' })
+  await setupStory({ name: 'Mentions légales', slug: 'mentions-legales', file: 'mentions-legales.json' })
+  await setupStory({ name: 'Politique de confidentialité', slug: 'politique-de-confidentialite', file: 'politique-de-confidentialite.json' })
   await setupStory({ name: 'Configuration du site', slug: 'config', file: 'config.json' })
   console.log('✔ Terminé')
 }

@@ -1,44 +1,43 @@
 import { fallbackConfig, fallbackPages } from '~/content'
+import { defaultLocale, type Locale } from '~/i18n/messages'
 
-/** Storyblok est actif dès qu'un token d'accès est configuré. */
 export function useStoryblokEnabled() {
   return Boolean(useRuntimeConfig().public.storyblok?.accessToken)
 }
 
-/** Charge une page depuis Storyblok, ou depuis le contenu local si Storyblok n'est pas encore connecté. */
-export async function usePageStory(slug: string) {
+function storyblokParams(locale: Locale) {
+  const { storyblokVersion } = useRuntimeConfig().public
+  return {
+    version: storyblokVersion as 'draft' | 'published',
+    ...(locale === defaultLocale ? {} : { language: locale }),
+  }
+}
+
+export async function usePageStory(slug: string, locale: Locale) {
   if (!useStoryblokEnabled()) {
-    const content = fallbackPages[slug]
+    const content = fallbackPages[locale][slug]
     return {
       story: computed(() => (content ? { name: content.seo_title, full_slug: slug, content } : undefined)),
     }
   }
 
-  const { storyblokVersion } = useRuntimeConfig().public
-  const { story } = await useAsyncStoryblok(slug, {
-    api: { version: storyblokVersion as 'draft' | 'published' },
-  })
+  const { story } = await useAsyncStoryblok(slug, { api: storyblokParams(locale) })
   return { story }
 }
 
-/**
- * Configuration globale (menu, contact, footer) : story « config » dans Storyblok.
- * Retombe sur le contenu local si Storyblok n'est pas connecté ou si la story n'existe pas.
- */
 export function useSiteConfig() {
   const enabled = useStoryblokEnabled()
-  const { storyblokVersion } = useRuntimeConfig().public
+  const { locale } = useLocale()
 
-  return useAsyncData('site-config', async () => {
-    if (!enabled) return fallbackConfig
+  return useAsyncData(() => `site-config-${locale.value}`, async () => {
+    const current = locale.value
+    if (!enabled) return fallbackConfig[current]
     try {
-      const { data } = await useStoryblokApi().get('cdn/stories/config', {
-        version: storyblokVersion as 'draft' | 'published',
-      })
+      const { data } = await useStoryblokApi().get('cdn/stories/config', storyblokParams(current))
       return data.story.content as Record<string, any>
     }
     catch {
-      return fallbackConfig
+      return fallbackConfig[current]
     }
-  }, { default: () => fallbackConfig })
+  }, { default: () => fallbackConfig[locale.value] })
 }

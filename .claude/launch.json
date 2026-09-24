@@ -6,6 +6,13 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 3000
+    },
+    {
+      "name": "nuxt-dev-local-content",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["nuxt", "dev", "--port", "3005"],
+      "env": { "NUXT_STORYBLOK_TOKEN": "" },
+      "port": 3005
     }
   ]
 }

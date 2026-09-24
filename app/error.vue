@@ -3,8 +3,12 @@ import type { NuxtError } from '#app'
 
 const props = defineProps<{ error: NuxtError }>()
 const notFound = computed(() => props.error.statusCode === 404)
+const { locale, t, localePath } = useLocale()
 
-useHead({ title: notFound.value ? 'Page introuvable' : 'Erreur' })
+useHead({
+  htmlAttrs: { lang: locale },
+  title: notFound.value ? t.value.pageNotFound : t.value.error.label,
+})
 </script>
 
 <template>
@@ -12,13 +16,13 @@ useHead({ title: notFound.value ? 'Page introuvable' : 'Erreur' })
   <main class="error section theme-dark">
     <BrandMark class="error__mark" mono />
     <div class="container">
-      <p class="eyebrow">Erreur {{ error.statusCode }}</p>
-      <h1 class="section-title">{{ notFound ? 'Cette page est introuvable.' : 'Une erreur est survenue.' }}</h1>
+      <p class="eyebrow">{{ t.error.label }} {{ error.statusCode }}</p>
+      <h1 class="section-title">{{ notFound ? t.error.notFoundTitle : t.error.genericTitle }}</h1>
       <p class="section-intro">
-        {{ notFound ? 'La page que vous cherchez a peut-être été déplacée ou n’existe plus.' : 'Merci de réessayer dans quelques instants.' }}
+        {{ notFound ? t.error.notFoundText : t.error.genericText }}
       </p>
-      <button class="btn btn--primary" type="button" @click="clearError({ redirect: '/' })">
-        Retour à l'accueil
+      <button class="btn btn--primary" type="button" @click="clearError({ redirect: localePath('/') })">
+        {{ t.error.backHome }}
         <BrandIcon name="arrow" />
       </button>
     </div>

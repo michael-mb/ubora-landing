@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { data: config } = useSiteConfig()
+const { t, localePath } = useLocale()
 const year = new Date().getFullYear()
 </script>
 
@@ -14,17 +15,17 @@ const year = new Date().getFullYear()
           <p v-if="config.footer_text">{{ config.footer_text }}</p>
         </div>
 
-        <nav aria-label="Menu du pied de page">
-          <h2 class="footer__heading">Navigation</h2>
+        <nav :aria-label="t.footerMenu">
+          <h2 class="footer__heading">{{ t.navigation }}</h2>
           <ul>
             <li v-for="item in config.navigation" :key="item._uid">
-              <NuxtLink :to="linkHref(item.link)">{{ item.label }}</NuxtLink>
+              <NuxtLink :to="localePath(linkHref(item.link))">{{ item.label }}</NuxtLink>
             </li>
           </ul>
         </nav>
 
         <div>
-          <h2 class="footer__heading">Contact</h2>
+          <h2 class="footer__heading">{{ t.contact }}</h2>
           <ul>
             <li v-if="config.phone"><a :href="`tel:${config.phone.replace(/\s+/g, '')}`">{{ config.phone }}</a></li>
             <li v-if="config.email"><a :href="`mailto:${config.email}`">{{ config.email }}</a></li>
@@ -34,7 +35,14 @@ const year = new Date().getFullYear()
       </div>
 
       <div class="footer__bottom">
-        <p>© {{ year }} {{ config.site_name }}. Tous droits réservés.</p>
+        <p>© {{ year }} {{ config.site_name }}. {{ t.rightsReserved }}</p>
+        <nav v-if="config.legal_links?.length" :aria-label="t.legalInformation">
+          <ul class="footer__legal">
+            <li v-for="item in config.legal_links" :key="item._uid">
+              <NuxtLink :to="localePath(linkHref(item.link))">{{ item.label }}</NuxtLink>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   </footer>
@@ -81,6 +89,12 @@ const year = new Date().getFullYear()
 
 .footer ul { display: grid; gap: 0.6rem; }
 
+.footer .footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
 .footer a {
   text-decoration: none;
   transition: color 0.2s;
@@ -89,6 +103,10 @@ const year = new Date().getFullYear()
 .footer a:hover { color: var(--yellow); }
 
 .footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgb(255 255 255 / 0.1);
   font-size: 0.875rem;

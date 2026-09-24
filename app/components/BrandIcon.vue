@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// Icônes au trait (24×24). Les noms correspondent au champ « icon » des blocs Storyblok.
 const props = defineProps<{ name?: string }>()
 
 const icons: Record<string, string> = {

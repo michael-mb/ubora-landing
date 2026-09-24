@@ -1,9 +1,8 @@
 <script setup lang="ts">
-// Si NUXT_PUBLIC_CONTACT_FORM_ENDPOINT est défini (Formspree, Web3Forms…), le formulaire y est envoyé en JSON.
-// Sinon, il ouvre le client mail du visiteur avec un message pré-rempli.
 const props = defineProps<{ subjects?: string[], email?: string }>()
 
 const { contactFormEndpoint } = useRuntimeConfig().public
+const { t, localePath } = useLocale()
 
 const form = reactive({
   name: '',
@@ -13,7 +12,7 @@ const form = reactive({
   subject: props.subjects?.[0] ?? '',
   message: '',
   consent: false,
-  website: '', // pot de miel anti-spam
+  website: '',
 })
 
 const status = ref<'idle' | 'sending' | 'sent' | 'error'>('idle')
@@ -25,12 +24,12 @@ async function submit() {
     const body = [
       form.message,
       '',
-      `Nom : ${form.name}`,
-      form.organisation && `Établissement : ${form.organisation}`,
-      `E-mail : ${form.email}`,
-      form.phone && `Téléphone : ${form.phone}`,
+      `${t.value.form.name}: ${form.name}`,
+      form.organisation && `${t.value.form.organisation}: ${form.organisation}`,
+      `${t.value.form.email}: ${form.email}`,
+      form.phone && `${t.value.form.phone}: ${form.phone}`,
     ].filter(line => line !== '').join('\n')
-    window.location.href = `mailto:${props.email ?? ''}?subject=${encodeURIComponent(`[Site web] ${form.subject}`)}&body=${encodeURIComponent(body)}`
+    window.location.href = `mailto:${props.email ?? ''}?subject=${encodeURIComponent(`${t.value.form.mailSubjectPrefix} ${form.subject}`)}&body=${encodeURIComponent(body)}`
     status.value = 'sent'
     return
   }
@@ -53,61 +52,64 @@ async function submit() {
 
 <template>
   <form class="contact-form" @submit.prevent="submit">
-    <h3 class="contact-form__title">Écrivez-nous</h3>
+    <h3 class="contact-form__title">{{ t.form.title }}</h3>
 
     <div class="contact-form__row">
       <label>
-        <span>Nom et prénom *</span>
+        <span>{{ t.form.name }} *</span>
         <input v-model="form.name" type="text" name="name" autocomplete="name" required>
       </label>
       <label>
-        <span>Établissement</span>
+        <span>{{ t.form.organisation }}</span>
         <input v-model="form.organisation" type="text" name="organisation" autocomplete="organization">
       </label>
     </div>
 
     <div class="contact-form__row">
       <label>
-        <span>E-mail *</span>
+        <span>{{ t.form.email }} *</span>
         <input v-model="form.email" type="email" name="email" autocomplete="email" required>
       </label>
       <label>
-        <span>Téléphone</span>
+        <span>{{ t.form.phone }}</span>
         <input v-model="form.phone" type="tel" name="phone" autocomplete="tel">
       </label>
     </div>
 
     <label v-if="subjects?.length">
-      <span>Objet</span>
+      <span>{{ t.form.subject }}</span>
       <select v-model="form.subject" name="subject">
         <option v-for="subject in subjects" :key="subject" :value="subject">{{ subject }}</option>
       </select>
     </label>
 
     <label>
-      <span>Votre message *</span>
+      <span>{{ t.form.message }} *</span>
       <textarea v-model="form.message" name="message" rows="5" required />
     </label>
 
     <label class="visually-hidden" aria-hidden="true">
-      Site web <input v-model="form.website" type="text" name="website" tabindex="-1" autocomplete="off">
+      {{ t.form.website }} <input v-model="form.website" type="text" name="website" tabindex="-1" autocomplete="off">
     </label>
 
     <label class="contact-form__consent">
       <input v-model="form.consent" type="checkbox" required>
-      <span>J'accepte que mes données soient utilisées pour être recontacté(e) au sujet de ma demande. *</span>
+      <span>
+        {{ t.form.consentBefore }}
+        <NuxtLink :to="localePath('/politique-de-confidentialite')" target="_blank">{{ t.form.consentLink }}</NuxtLink>. *
+      </span>
     </label>
 
     <button class="btn btn--primary" type="submit" :disabled="status === 'sending'">
-      {{ status === 'sending' ? 'Envoi en cours…' : 'Envoyer ma demande' }}
+      {{ status === 'sending' ? t.form.sending : t.form.submit }}
       <BrandIcon name="arrow" />
     </button>
 
     <p v-if="status === 'sent'" class="contact-form__status" role="status">
-      {{ contactFormEndpoint ? 'Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement.' : 'Votre client mail s’est ouvert avec votre message : il ne reste plus qu’à l’envoyer.' }}
+      {{ contactFormEndpoint ? t.form.sent : t.form.mailOpened }}
     </p>
     <p v-if="status === 'error'" class="contact-form__status contact-form__status--error" role="alert">
-      L'envoi a échoué. Vous pouvez nous écrire directement à <a :href="`mailto:${email}`">{{ email }}</a>.
+      {{ t.form.failed }} <a :href="`mailto:${email}`">{{ email }}</a>.
     </p>
   </form>
 </template>
@@ -178,6 +180,8 @@ textarea { resize: vertical; }
   font-size: 0.875rem;
   color: var(--ink-muted);
 }
+
+.contact-form__consent a { color: var(--brown); font-weight: 600; }
 
 .contact-form__consent input {
   flex: none;

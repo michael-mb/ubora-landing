@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// Le « U » d'Ubora (tracés issus de la présentation du logo), utilisé comme élément graphique.
 withDefaults(defineProps<{ mono?: boolean }>(), { mono: false })
 </script>
 

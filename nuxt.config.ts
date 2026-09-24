@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 const storyblokToken = process.env.NUXT_STORYBLOK_TOKEN || ''
 
 export default defineNuxtConfig({
@@ -10,22 +9,19 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   storyblok: {
-    // Sans token, le site utilise le contenu local de app/content (voir README).
     accessToken: storyblokToken,
-    // Sans token, app/plugins/storyblok-offline.ts enregistre le SDK sans le client API.
     usePlugin: Boolean(storyblokToken),
     apiOptions: {
       region: (process.env.NUXT_STORYBLOK_REGION || 'eu') as 'eu',
+      cache: { type: 'none', cv: 'manual' },
     },
     componentsDir: '~/storyblok',
   },
 
   runtimeConfig: {
     public: {
-      // 'draft' pour la prévisualisation, 'published' en production.
       storyblokVersion: process.env.NUXT_PUBLIC_STORYBLOK_VERSION
         || (process.env.NODE_ENV === 'production' ? 'published' : 'draft'),
-      // Endpoint optionnel (Formspree, Web3Forms…). Vide = envoi via le client mail.
       contactFormEndpoint: '',
       siteUrl: 'https://www.uboracapital.com',
     },

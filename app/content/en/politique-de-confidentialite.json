@@ -1,0 +1,564 @@
+{
+  "component": "page",
+  "_uid": "page-Privacy policy",
+  "seo_title": "Privacy policy — UBORA CAPITAL PARTNER",
+  "seo_description": "How UBORA CAPITAL PARTNER processes your personal data on this website, in accordance with the GDPR.",
+  "body": [
+    {
+      "component": "page-header",
+      "_uid": "header",
+      "eyebrow": "Legal information",
+      "title": "Privacy policy",
+      "intro": "Protecting your personal data matters to us. This page explains which data is processed when you use this website, and what your rights are under the General Data Protection Regulation (GDPR)."
+    },
+    {
+      "component": "rich-text",
+      "_uid": "content",
+      "content": {
+        "type": "doc",
+        "content": [
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "1. Data controller"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "UBORA CAPITAL PARTNER",
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": " [TO BE COMPLETED: legal form, e.g. GmbH or UG (haftungsbeschränkt)]"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "[TO BE COMPLETED: street and number]"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "[TO BE COMPLETED: postcode and city]"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "Germany"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "Phone: +49 176 75892256"
+              },
+              {
+                "type": "hard_break"
+              },
+              {
+                "type": "text",
+                "text": "Email: "
+              },
+              {
+                "type": "text",
+                "text": "uboracapital@info.com",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "mailto:uboracapital@info.com",
+                      "linktype": "email",
+                      "target": null
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Data protection officer: [TO BE COMPLETED: contact details if an officer has been appointed, otherwise remove this line]"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "2. Hosting and server logs"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "This website is hosted by [TO BE COMPLETED: name, address and country of the hosting provider]. Each time you visit, the server automatically records technical information sent by your browser:"
+              }
+            ]
+          },
+          {
+            "type": "bullet_list",
+            "content": [
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "IP address"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "date and time of the request"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "page visited and referring page"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "browser type and version, operating system"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "This data is required to display the website and to ensure its security and stability. Legal basis: Art. 6(1)(f) GDPR (legitimate interest). It is deleted after [TO BE COMPLETED: period, e.g. 7 days]. A data processing agreement has been concluded with the hosting provider (Art. 28 GDPR)."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "3. Content management system (Storyblok)"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The content of this website is managed with Storyblok, a service provided by Storyblok GmbH (Linz, Austria). While you browse, your browser may load content and images directly from Storyblok servers, which then receive your IP address. Legal basis: Art. 6(1)(f) GDPR (legitimate interest in presenting the website efficiently). More information: "
+              },
+              {
+                "type": "text",
+                "text": "storyblok.com/legal/privacy-policy",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "https://www.storyblok.com/legal/privacy-policy",
+                      "linktype": "url",
+                      "target": "_blank"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "4. Fonts"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "The fonts used on this website are hosted directly on our server. No connection to third-party servers (such as Google Fonts) is made to load them."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "5. Cookies and analytics"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "This website does not use tracking cookies, analytics or advertising tools. No user profiles are created."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "6. Contacting us"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "When you contact us via the form, by email or by phone, we process the data you provide (name, facility, contact details, subject and content of your message) in order to handle and answer your enquiry."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Legal basis: Art. 6(1)(b) GDPR where your enquiry relates to a potential collaboration or pre-contractual steps, and Art. 6(1)(a) GDPR (consent) in all other cases. You may withdraw your consent at any time."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "By default, the form opens your email client: your message is then sent to us through your own email provider. [TO BE COMPLETED: if a form submission service is enabled (e.g. Formspree), state its name, location and safeguards for transfers outside the EU]"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Your data is kept for as long as necessary to handle your enquiry and then deleted, unless a legal retention obligation applies (in particular under commercial or tax law)."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "7. Recipients and transfers"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Your data is neither sold nor passed on to third parties. It is only shared with the service providers needed to run this website (hosting, content management), under data processing agreements. If an enquiry concerns a project in Cameroon, information may be shared with our local team to the extent necessary to handle it."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "8. Your rights"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "You have the following rights regarding your data at any time:"
+              }
+            ]
+          },
+          {
+            "type": "bullet_list",
+            "content": [
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "right of access (Art. 15 GDPR)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "right to rectification (Art. 16 GDPR)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "right to erasure (Art. 17 GDPR)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "right to restriction of processing (Art. 18 GDPR)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "right to data portability (Art. 20 GDPR)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "right to object to processing based on legitimate interest (Art. 21 GDPR)"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "list_item",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "right to withdraw your consent at any time, without affecting the lawfulness of prior processing (Art. 7(3) GDPR)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "To exercise these rights, email us at "
+              },
+              {
+                "type": "text",
+                "text": "uboracapital@info.com",
+                "marks": [
+                  {
+                    "type": "link",
+                    "attrs": {
+                      "href": "mailto:uboracapital@info.com",
+                      "linktype": "email",
+                      "target": null
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "text": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "You also have the right to lodge a complaint with a supervisory authority (Art. 77 GDPR), in particular the authority of your place of residence or the one responsible for us: [TO BE COMPLETED: data protection authority of the federal state where the company is registered]."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "9. Security"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "This website uses SSL/TLS encryption to protect the data transmitted. You can recognise it by the address beginning with “https://” and the padlock in your browser bar."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "attrs": {
+              "level": 2
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "10. Changes to this policy"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "We may update this privacy policy to reflect changes to the website or to the law. The version in force is the one published on this page."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Last updated: September 2026"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
