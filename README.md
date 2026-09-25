@@ -99,8 +99,17 @@ In Storyblok: *Content → Create new → Story*, type **Page**, slug `a-propos`
 
 ## Contact form
 
-- With no configuration, submitting opens the visitor's mail client with a prefilled message, addressed to the email in the config story.
-- For direct submission, set `NUXT_PUBLIC_CONTACT_FORM_ENDPOINT` to a Formspree, Web3Forms, etc. endpoint that accepts JSON.
+Submissions are posted to `server/api/contact.post.ts`, which sends an email through [Brevo](https://www.brevo.com) (free plan: 300 emails/day, EU-based). Replying to the email answers the visitor directly.
+
+1. Create a free Brevo account.
+2. *Senders, domains & dedicated IPs → Senders*: add and verify `ubora.cp@outlook.de` (Brevo sends a confirmation email).
+3. *SMTP & API → API keys*: create a key.
+4. Set the environment variables (in `.env` locally, in Vercel for production):
+   - `NUXT_BREVO_API_KEY`: the API key
+   - `NUXT_CONTACT_TO`: recipient (default `ubora.cp@outlook.de`)
+   - `NUXT_CONTACT_FROM`: verified sender (default: same as the recipient)
+
+Without an API key, the form falls back to opening the visitor's mail client with a prefilled message.
 
 ## Deployment
 
@@ -118,6 +127,7 @@ On **Vercel**, import the GitHub repository (Nuxt is detected automatically) and
 | `NUXT_STORYBLOK_REGION` | `eu` | `eu` |
 | `NUXT_PUBLIC_STORYBLOK_VERSION` | `published` | `draft` |
 | `NUXT_PUBLIC_SITE_URL` | site URL | — |
+| `NUXT_BREVO_API_KEY` | Brevo API key | Brevo API key |
 
 Never deploy `STORYBLOK_PERSONAL_TOKEN`: it is only used by the local setup script. Published content appears without redeploying; changing an environment variable requires a redeploy.
 
@@ -125,7 +135,7 @@ For a fully static site (`npm run generate`), add a Storyblok webhook that trigg
 
 ## To confirm with the client
 
-- **Email and phone**: taken from the business card (`uboracapital@info.com`, `+49 176 75892256`). The email address needs to be confirmed.
+- **Email and phone**: taken from the business card (`ubora.cp@outlook.de`, `+49 176 75892256`). The email address needs to be confirmed.
 - **Domain name**: `NUXT_PUBLIC_SITE_URL`, used for canonical and Open Graph tags.
 - **Legal notice and privacy policy** (`/mentions-legales`, `/politique-de-confidentialite`): the fields marked `[À COMPLÉTER : …]` / `[TO BE COMPLETED: …]` must be filled in (legal form, address, register, VAT, hosting provider, supervisory authority…). These texts are templates and must be reviewed by a lawyer. For a German company, a German version of the Impressum is recommended.
 - **English copy**: written by the developer, to be proofread by the client.

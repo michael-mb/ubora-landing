@@ -82,12 +82,12 @@
               },
               {
                 "type": "text",
-                "text": "uboracapital@info.com",
+                "text": "ubora.cp@outlook.de",
                 "marks": [
                   {
                     "type": "link",
                     "attrs": {
-                      "href": "mailto:uboracapital@info.com",
+                      "href": "mailto:ubora.cp@outlook.de",
                       "linktype": "email",
                       "target": null
                     }
@@ -312,7 +312,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "By default, the form opens your email client: your message is then sent to us through your own email provider. [TO BE COMPLETED: if a form submission service is enabled (e.g. Formspree), state its name, location and safeguards for transfers outside the EU]"
+                "text": "Messages sent through the form are forwarded to us by email using the Brevo service (Sendinblue SAS, Paris, France), under its data processing agreement (Art. 28 GDPR). The data is processed within the European Union and is not used for any other purpose."
               }
             ]
           },
@@ -342,7 +342,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "Your data is neither sold nor passed on to third parties. It is only shared with the service providers needed to run this website (hosting, content management), under data processing agreements. If an enquiry concerns a project in Cameroon, information may be shared with our local team to the extent necessary to handle it."
+                "text": "Your data is neither sold nor passed on to third parties. It is only shared with the service providers needed to run this website (hosting, content management, email delivery), under data processing agreements. If an enquiry concerns a project in Cameroon, information may be shared with our local team to the extent necessary to handle it."
               }
             ]
           },
@@ -479,12 +479,12 @@
               },
               {
                 "type": "text",
-                "text": "uboracapital@info.com",
+                "text": "ubora.cp@outlook.de",
                 "marks": [
                   {
                     "type": "link",
                     "attrs": {
-                      "href": "mailto:uboracapital@info.com",
+                      "href": "mailto:ubora.cp@outlook.de",
                       "linktype": "email",
                       "target": null
                     }

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{ subjects?: string[], email?: string }>()
 
-const { contactFormEndpoint } = useRuntimeConfig().public
 const { t, localePath } = useLocale()
 
 const form = reactive({
@@ -15,37 +14,32 @@ const form = reactive({
   website: '',
 })
 
-const status = ref<'idle' | 'sending' | 'sent' | 'error'>('idle')
+const status = ref<'idle' | 'sending' | 'sent' | 'mail-opened' | 'error'>('idle')
+
+function openMailClient() {
+  const body = [
+    form.message,
+    '',
+    `${t.value.form.name}: ${form.name}`,
+    form.organisation && `${t.value.form.organisation}: ${form.organisation}`,
+    `${t.value.form.email}: ${form.email}`,
+    form.phone && `${t.value.form.phone}: ${form.phone}`,
+  ].filter(line => line !== '').join('\n')
+  window.location.href = `mailto:${props.email ?? ''}?subject=${encodeURIComponent(`${t.value.form.mailSubjectPrefix} ${form.subject}`)}&body=${encodeURIComponent(body)}`
+  status.value = 'mail-opened'
+}
 
 async function submit() {
   if (form.website) return
 
-  if (!contactFormEndpoint) {
-    const body = [
-      form.message,
-      '',
-      `${t.value.form.name}: ${form.name}`,
-      form.organisation && `${t.value.form.organisation}: ${form.organisation}`,
-      `${t.value.form.email}: ${form.email}`,
-      form.phone && `${t.value.form.phone}: ${form.phone}`,
-    ].filter(line => line !== '').join('\n')
-    window.location.href = `mailto:${props.email ?? ''}?subject=${encodeURIComponent(`${t.value.form.mailSubjectPrefix} ${form.subject}`)}&body=${encodeURIComponent(body)}`
-    status.value = 'sent'
-    return
-  }
-
   status.value = 'sending'
   try {
-    const { website, consent, ...payload } = form
-    await $fetch(contactFormEndpoint as string, {
-      method: 'POST',
-      headers: { Accept: 'application/json' },
-      body: payload,
-    })
+    await $fetch('/api/contact', { method: 'POST', body: form })
     status.value = 'sent'
   }
-  catch {
-    status.value = 'error'
+  catch (error: any) {
+    if (error?.statusCode === 503) openMailClient()
+    else status.value = 'error'
   }
 }
 </script>
@@ -105,8 +99,8 @@ async function submit() {
       <BrandIcon name="arrow" />
     </button>
 
-    <p v-if="status === 'sent'" class="contact-form__status" role="status">
-      {{ contactFormEndpoint ? t.form.sent : t.form.mailOpened }}
+    <p v-if="status === 'sent' || status === 'mail-opened'" class="contact-form__status" role="status">
+      {{ status === 'sent' ? t.form.sent : t.form.mailOpened }}
     </p>
     <p v-if="status === 'error'" class="contact-form__status contact-form__status--error" role="alert">
       {{ t.form.failed }} <a :href="`mailto:${email}`">{{ email }}</a>.

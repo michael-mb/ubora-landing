@@ -114,12 +114,12 @@
               },
               {
                 "type": "text",
-                "text": "uboracapital@info.com",
+                "text": "ubora.cp@outlook.de",
                 "marks": [
                   {
                     "type": "link",
                     "attrs": {
-                      "href": "mailto:uboracapital@info.com",
+                      "href": "mailto:ubora.cp@outlook.de",
                       "linktype": "email",
                       "target": null
                     }

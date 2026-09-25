@@ -82,12 +82,12 @@
               },
               {
                 "type": "text",
-                "text": "uboracapital@info.com",
+                "text": "ubora.cp@outlook.de",
                 "marks": [
                   {
                     "type": "link",
                     "attrs": {
-                      "href": "mailto:uboracapital@info.com",
+                      "href": "mailto:ubora.cp@outlook.de",
                       "linktype": "email",
                       "target": null
                     }
@@ -312,7 +312,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "Par défaut, le formulaire ouvre votre logiciel de messagerie : le message nous est alors envoyé par votre propre fournisseur de messagerie. [À COMPLÉTER : si un service d'envoi de formulaire est activé (ex. Formspree), indiquer son nom, son siège et les garanties de transfert hors UE]"
+                "text": "Les messages envoyés via le formulaire nous sont transmis par e-mail au moyen du service Brevo (Sendinblue SAS, Paris, France), dans le cadre de son accord de traitement des données (art. 28 RGPD). Les données sont traitées dans l'Union européenne et ne sont pas utilisées à d'autres fins."
               }
             ]
           },
@@ -342,7 +342,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "Vos données ne sont ni vendues ni cédées à des tiers. Elles ne sont communiquées qu'aux prestataires nécessaires au fonctionnement du site (hébergement, gestion de contenu), dans le cadre de contrats de sous-traitance. Si une demande concerne un projet au Cameroun, les informations peuvent être partagées avec notre équipe sur place, dans la mesure nécessaire au traitement de votre demande."
+                "text": "Vos données ne sont ni vendues ni cédées à des tiers. Elles ne sont communiquées qu'aux prestataires nécessaires au fonctionnement du site (hébergement, gestion de contenu, envoi d'e-mails), dans le cadre de contrats de sous-traitance. Si une demande concerne un projet au Cameroun, les informations peuvent être partagées avec notre équipe sur place, dans la mesure nécessaire au traitement de votre demande."
               }
             ]
           },
@@ -479,12 +479,12 @@
               },
               {
                 "type": "text",
-                "text": "uboracapital@info.com",
+                "text": "ubora.cp@outlook.de",
                 "marks": [
                   {
                     "type": "link",
                     "attrs": {
-                      "href": "mailto:uboracapital@info.com",
+                      "href": "mailto:ubora.cp@outlook.de",
                       "linktype": "email",
                       "target": null
                     }
