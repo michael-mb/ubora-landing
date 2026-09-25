@@ -6,7 +6,10 @@ function singleLine(value: unknown, max: number) {
 
 export default defineEventHandler(async (event) => {
   const body = await readBody<Record<string, unknown>>(event)
-  if (body?.website) return { ok: true }
+  if (body?.hp_check) {
+    console.warn('Contact form: honeypot filled, submission ignored')
+    return { ok: true }
+  }
 
   const name = singleLine(body?.name, 200)
   const organisation = singleLine(body?.organisation, 200)

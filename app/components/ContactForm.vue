@@ -11,7 +11,7 @@ const form = reactive({
   subject: props.subjects?.[0] ?? '',
   message: '',
   consent: false,
-  website: '',
+  hp_check: '',
 })
 
 const status = ref<'idle' | 'sending' | 'sent' | 'mail-opened' | 'error'>('idle')
@@ -30,8 +30,6 @@ function openMailClient() {
 }
 
 async function submit() {
-  if (form.website) return
-
   status.value = 'sending'
   try {
     await $fetch('/api/contact', { method: 'POST', body: form })
@@ -83,7 +81,7 @@ async function submit() {
     </label>
 
     <label class="visually-hidden" aria-hidden="true">
-      {{ t.form.website }} <input v-model="form.website" type="text" name="website" tabindex="-1" autocomplete="off">
+      {{ t.form.honeypot }} <input v-model="form.hp_check" type="text" name="hp_check" tabindex="-1" autocomplete="off" data-1p-ignore data-lpignore="true">
     </label>
 
     <label class="contact-form__consent">

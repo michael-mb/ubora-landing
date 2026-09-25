@@ -4,15 +4,37 @@
     {
       "name": "nuxt-dev",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 3000
     },
     {
       "name": "nuxt-dev-local-content",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["nuxt", "dev", "--port", "3005"],
-      "env": { "NUXT_STORYBLOK_TOKEN": "" },
+      "runtimeArgs": [
+        "nuxt",
+        "dev",
+        "--port",
+        "3005"
+      ],
+      "env": {
+        "NUXT_STORYBLOK_TOKEN": ""
+      },
       "port": 3005
+    },
+    {
+      "name": "prod-local",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        ".output/server/index.mjs"
+      ],
+      "env": {
+        "PORT": "3010",
+        "NUXT_PUBLIC_STORYBLOK_VERSION": "published"
+      },
+      "port": 3010
     }
   ]
 }
