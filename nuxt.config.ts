@@ -19,9 +19,6 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    brevoApiKey: '',
-    contactTo: 'ubora.cp@outlook.de',
-    contactFrom: '',
     public: {
       storyblokVersion: process.env.NUXT_PUBLIC_STORYBLOK_VERSION
         || (process.env.NODE_ENV === 'production' ? 'published' : 'draft'),

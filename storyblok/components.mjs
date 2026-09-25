@@ -170,8 +170,6 @@ export const components = [
       items: { type: 'textarea', display_name: 'Liste (un élément par ligne)' },
       text: { type: 'textarea', display_name: 'Texte' },
       closing: { type: 'text', display_name: 'Phrase de clôture' },
-      show_form: { type: 'boolean', display_name: 'Afficher le formulaire', default_value: true },
-      form_subjects: { type: 'textarea', display_name: 'Objets du formulaire (un par ligne)' },
     },
   },
 

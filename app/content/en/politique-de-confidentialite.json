@@ -294,7 +294,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "When you contact us via the form, by email or by phone, we process the data you provide (name, facility, contact details, subject and content of your message) in order to handle and answer your enquiry."
+                "text": "When you contact us by email or by phone, we process the data you provide (name, contact details, content of your message) in order to handle and answer your enquiry."
               }
             ]
           },
@@ -303,16 +303,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "Legal basis: Art. 6(1)(b) GDPR where your enquiry relates to a potential collaboration or pre-contractual steps, and Art. 6(1)(a) GDPR (consent) in all other cases. You may withdraw your consent at any time."
-              }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "content": [
-              {
-                "type": "text",
-                "text": "Messages sent through the form are forwarded to us by email using the Brevo service (Sendinblue SAS, Paris, France), under its data processing agreement (Art. 28 GDPR). The data is processed within the European Union and is not used for any other purpose."
+                "text": "Legal basis: Art. 6(1)(b) GDPR where your enquiry relates to a potential collaboration or pre-contractual steps, and Art. 6(1)(f) GDPR (legitimate interest in answering enquiries sent to us) in all other cases."
               }
             ]
           },
@@ -342,7 +333,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "Your data is neither sold nor passed on to third parties. It is only shared with the service providers needed to run this website (hosting, content management, email delivery), under data processing agreements. If an enquiry concerns a project in Cameroon, information may be shared with our local team to the extent necessary to handle it."
+                "text": "Your data is neither sold nor passed on to third parties. It is only shared with the service providers needed to run this website (hosting, content management), under data processing agreements. If an enquiry concerns a project in Cameroon, information may be shared with our local team to the extent necessary to handle it."
               }
             ]
           },

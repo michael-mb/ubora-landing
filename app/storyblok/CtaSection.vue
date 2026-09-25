@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const props = defineProps<{ blok: Record<string, any> }>()
 const items = computed(() => toLines(props.blok.items))
-const subjects = computed(() => toLines(props.blok.form_subjects))
 const { data: config } = useSiteConfig()
+const { t } = useLocale()
 </script>
 
 <template>
@@ -22,24 +22,40 @@ const { data: config } = useSiteConfig()
 
         <p v-if="blok.text" class="cta__text">{{ blok.text }}</p>
         <p v-if="blok.closing" class="cta__closing">{{ blok.closing }}</p>
+      </div>
 
+      <div class="cta__card reveal">
+        <h3 class="cta__card-title">{{ t.contactCard.title }}</h3>
         <ul class="cta__direct">
           <li v-if="config.phone">
-            <BrandIcon name="phone" />
-            <a :href="`tel:${config.phone.replace(/\s+/g, '')}`">{{ config.phone }}</a>
+            <a :href="`tel:${config.phone.replace(/\s+/g, '')}`">
+              <span class="cta__icon"><BrandIcon name="phone" /></span>
+              <span>
+                <span class="cta__label">{{ t.contactCard.phone }}</span>
+                <span class="cta__value">{{ config.phone }}</span>
+              </span>
+            </a>
           </li>
           <li v-if="config.email">
-            <BrandIcon name="mail" />
-            <a :href="`mailto:${config.email}`">{{ config.email }}</a>
+            <a :href="`mailto:${config.email}`">
+              <span class="cta__icon"><BrandIcon name="mail" /></span>
+              <span>
+                <span class="cta__label">{{ t.contactCard.email }}</span>
+                <span class="cta__value">{{ config.email }}</span>
+              </span>
+            </a>
           </li>
           <li v-if="config.locations">
-            <BrandIcon name="field" />
-            <span>{{ config.locations }}</span>
+            <div>
+              <span class="cta__icon"><BrandIcon name="field" /></span>
+              <span>
+                <span class="cta__label">{{ t.contactCard.locations }}</span>
+                <span class="cta__value">{{ config.locations }}</span>
+              </span>
+            </div>
           </li>
         </ul>
       </div>
-
-      <ContactForm v-if="blok.show_form" class="reveal" :subjects="subjects" :email="config.email" />
     </div>
   </section>
 </template>
@@ -90,33 +106,73 @@ const { data: config } = useSiteConfig()
   line-height: 1.3;
 }
 
+.cta__card {
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 30px 80px -30px rgb(0 0 0 / 0.6);
+}
+
+.cta__card-title {
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: var(--brown);
+}
+
 .cta__direct {
   display: grid;
-  gap: 0.9rem;
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgb(255 255 255 / 0.12);
+  gap: 0.75rem;
+  margin-top: 1.5rem;
 }
 
-.cta__direct li {
+.cta__direct a,
+.cta__direct div {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
-  font-weight: 500;
-}
-
-.cta__direct svg {
-  width: 22px;
-  height: 22px;
-  color: var(--yellow);
-}
-
-.cta__direct a {
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
-.cta__direct a:hover { color: var(--yellow); }
+.cta__direct a:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgb(239 193 0 / 0.2);
+  transform: translateY(-2px);
+}
+
+.cta__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--yellow);
+  color: var(--brown);
+}
+
+.cta__icon svg { width: 22px; height: 22px; }
+
+.cta__label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.cta__value {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--brown);
+  overflow-wrap: anywhere;
+}
 
 .cta__mark {
   position: absolute;

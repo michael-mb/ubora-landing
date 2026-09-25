@@ -13,9 +13,39 @@
       "missions_title": "Nos missions",
       "missions": "Préserver les établissements de santé stratégiques\nAccompagner leur professionnalisation\nFinancer leur développement\nConstruire un réseau intégré de santé de proximité",
       "buttons": [
-        { "component": "button", "_uid": "hero-btn-1", "label": "Découvrir notre approche", "variant": "primary", "link": { "linktype": "url", "url": "#approche", "cached_url": "#approche" } },
-        { "component": "button", "_uid": "hero-btn-2", "label": "Proposer une opportunité", "variant": "secondary", "link": { "linktype": "url", "url": "#contact", "cached_url": "#contact" } },
-        { "component": "button", "_uid": "hero-btn-3", "label": "Nous contacter", "variant": "ghost", "link": { "linktype": "url", "url": "#contact", "cached_url": "#contact" } }
+        {
+          "component": "button",
+          "_uid": "hero-btn-1",
+          "label": "Découvrir notre approche",
+          "variant": "primary",
+          "link": {
+            "linktype": "url",
+            "url": "#approche",
+            "cached_url": "#approche"
+          }
+        },
+        {
+          "component": "button",
+          "_uid": "hero-btn-2",
+          "label": "Proposer une opportunité",
+          "variant": "secondary",
+          "link": {
+            "linktype": "url",
+            "url": "#contact",
+            "cached_url": "#contact"
+          }
+        },
+        {
+          "component": "button",
+          "_uid": "hero-btn-3",
+          "label": "Nous contacter",
+          "variant": "ghost",
+          "link": {
+            "linktype": "url",
+            "url": "#contact",
+            "cached_url": "#contact"
+          }
+        }
       ]
     },
     {
@@ -35,7 +65,12 @@
       "title": "Un marché à fort potentiel, mais très fragmenté",
       "intro": "Chaque jour, de nombreuses structures de santé doivent faire face à :",
       "lists": [
-        { "component": "list-group", "_uid": "defi-list", "style": "bullet", "items": "Un accès limité au financement\nUne gouvernance insuffisamment formalisée\nDes difficultés de gestion et de pilotage\nUn manque d'investissement dans les équipements\nUne faible structuration administrative et financière\nDes enjeux de succession et de transmission" }
+        {
+          "component": "list-group",
+          "_uid": "defi-list",
+          "style": "bullet",
+          "items": "Un accès limité au financement\nUne gouvernance insuffisamment formalisée\nDes difficultés de gestion et de pilotage\nUn manque d'investissement dans les équipements\nUne faible structuration administrative et financière\nDes enjeux de succession et de transmission"
+        }
       ],
       "outro": "Cette situation freine leur développement alors même qu'elles jouent un rôle essentiel dans l'accès aux soins des populations.",
       "theme": "light"
@@ -48,7 +83,13 @@
       "title": "La transmission des entreprises de santé",
       "intro": "De nombreuses pharmacies, cabinets médicaux, laboratoires et cliniques fondés il y a plusieurs décennies arrivent aujourd'hui à une étape décisive de leur histoire.\nLes fondateurs souhaitent transmettre leur entreprise, tandis que les héritiers ne disposent pas toujours de la volonté ou des moyens nécessaires pour en assurer la continuité.",
       "lists": [
-        { "component": "list-group", "_uid": "transmission-list", "style": "check", "title": "UBORA CAPITAL PARTNER apporte une solution de reprise responsable permettant :", "items": "La continuité des activités\nLa préservation des emplois\nLa protection du savoir-faire\nLe maintien de l'accès aux soins pour les populations locales" }
+        {
+          "component": "list-group",
+          "_uid": "transmission-list",
+          "style": "check",
+          "title": "UBORA CAPITAL PARTNER apporte une solution de reprise responsable permettant :",
+          "items": "La continuité des activités\nLa préservation des emplois\nLa protection du savoir-faire\nLe maintien de l'accès aux soins pour les populations locales"
+        }
       ],
       "theme": "dark"
     },
@@ -60,10 +101,34 @@
       "title": "Nous investissons dans quatre segments clés",
       "theme": "light",
       "cards": [
-        { "component": "card", "_uid": "card-pharmacie", "icon": "pharmacy", "title": "Pharmacies de détail", "text": "Nous accompagnons les pharmacies bénéficiant d'un emplacement stratégique et présentant un fort potentiel de modernisation, d'expansion ou de consolidation." },
-        { "component": "card", "_uid": "card-labo", "icon": "laboratory", "title": "Laboratoires d'analyses médicales", "text": "Nous soutenons les structures qui répondent à une demande croissante en diagnostics fiables, modernes et accessibles." },
-        { "component": "card", "_uid": "card-centre", "icon": "health-center", "title": "Centres de santé familiaux", "text": "Nous investissons dans les établissements de proximité confrontés à des besoins de financement, de structuration ou de transmission." },
-        { "component": "card", "_uid": "card-clinique", "icon": "clinic", "title": "Cliniques privées", "text": "Nous apportons les ressources financières et opérationnelles nécessaires pour accélérer leur développement et renforcer leur gouvernance." }
+        {
+          "component": "card",
+          "_uid": "card-pharmacie",
+          "icon": "pharmacy",
+          "title": "Pharmacies de détail",
+          "text": "Nous accompagnons les pharmacies bénéficiant d'un emplacement stratégique et présentant un fort potentiel de modernisation, d'expansion ou de consolidation."
+        },
+        {
+          "component": "card",
+          "_uid": "card-labo",
+          "icon": "laboratory",
+          "title": "Laboratoires d'analyses médicales",
+          "text": "Nous soutenons les structures qui répondent à une demande croissante en diagnostics fiables, modernes et accessibles."
+        },
+        {
+          "component": "card",
+          "_uid": "card-centre",
+          "icon": "health-center",
+          "title": "Centres de santé familiaux",
+          "text": "Nous investissons dans les établissements de proximité confrontés à des besoins de financement, de structuration ou de transmission."
+        },
+        {
+          "component": "card",
+          "_uid": "card-clinique",
+          "icon": "clinic",
+          "title": "Cliniques privées",
+          "text": "Nous apportons les ressources financières et opérationnelles nécessaires pour accélérer leur développement et renforcer leur gouvernance."
+        }
       ]
     },
     {
@@ -75,8 +140,22 @@
       "intro": "Contrairement à un investisseur purement financier, nous nous impliquons directement dans la création de valeur des entreprises que nous accompagnons.",
       "theme": "cream",
       "steps": [
-        { "component": "step", "_uid": "step-capital", "icon": "capital", "title": "Apport de capital", "intro": "Nous finançons :", "items": "Les acquisitions et reprises d'établissements\nL'ouverture de nouveaux sites\nLa modernisation des infrastructures\nL'acquisition d'équipements médicaux\nLe renforcement du fonds de roulement\nLes projets de croissance externe" },
-        { "component": "step", "_uid": "step-ops", "icon": "support", "title": "Accompagnement opérationnel", "intro": "Nous aidons les dirigeants à :", "items": "Améliorer leur gouvernance\nStructurer leur gestion financière\nMettre en place des outils de pilotage\nOptimiser leurs processus opérationnels\nProfessionnaliser leurs équipes\nRenforcer leur conformité réglementaire\nPréparer l'accès au financement bancaire" }
+        {
+          "component": "step",
+          "_uid": "step-capital",
+          "icon": "capital",
+          "title": "Apport de capital",
+          "intro": "Nous finançons :",
+          "items": "Les acquisitions et reprises d'établissements\nL'ouverture de nouveaux sites\nLa modernisation des infrastructures\nL'acquisition d'équipements médicaux\nLe renforcement du fonds de roulement\nLes projets de croissance externe"
+        },
+        {
+          "component": "step",
+          "_uid": "step-ops",
+          "icon": "support",
+          "title": "Accompagnement opérationnel",
+          "intro": "Nous aidons les dirigeants à :",
+          "items": "Améliorer leur gouvernance\nStructurer leur gestion financière\nMettre en place des outils de pilotage\nOptimiser leurs processus opérationnels\nProfessionnaliser leurs équipes\nRenforcer leur conformité réglementaire\nPréparer l'accès au financement bancaire"
+        }
       ],
       "conclusion_label": "Notre objectif est simple",
       "conclusion": "Transformer des actifs sous-exploités en entreprises performantes, rentables et bancables."
@@ -89,8 +168,20 @@
       "title": "Construire le premier réseau intégré de santé de proximité",
       "theme": "dark",
       "lists": [
-        { "component": "list-group", "_uid": "strategie-eco", "style": "number", "title": "Nous développons progressivement un écosystème composé de :", "items": "Pharmacies\nLaboratoires médicaux\nCentres de santé\nCliniques privées" },
-        { "component": "list-group", "_uid": "strategie-benefices", "style": "check", "title": "Cette stratégie permet :", "items": "Une meilleure mutualisation des ressources\nUne optimisation des coûts\nUne amélioration continue de la qualité des soins\nUn renforcement de la rentabilité\nUne attractivité accrue auprès des investisseurs institutionnels" }
+        {
+          "component": "list-group",
+          "_uid": "strategie-eco",
+          "style": "number",
+          "title": "Nous développons progressivement un écosystème composé de :",
+          "items": "Pharmacies\nLaboratoires médicaux\nCentres de santé\nCliniques privées"
+        },
+        {
+          "component": "list-group",
+          "_uid": "strategie-benefices",
+          "style": "check",
+          "title": "Cette stratégie permet :",
+          "items": "Une meilleure mutualisation des ressources\nUne optimisation des coûts\nUne amélioration continue de la qualité des soins\nUn renforcement de la rentabilité\nUne attractivité accrue auprès des investisseurs institutionnels"
+        }
       ]
     },
     {
@@ -103,10 +194,34 @@
       "cards_title": "Nos atouts",
       "theme": "light",
       "cards": [
-        { "component": "card", "_uid": "atout-expertise", "icon": "expertise", "title": "Expertise sectorielle", "text": "Une spécialisation exclusive dans le secteur de la santé." },
-        { "component": "card", "_uid": "atout-terrain", "icon": "field", "title": "Expérience de terrain", "text": "Une compréhension concrète des défis rencontrés par les PME de santé." },
-        { "component": "card", "_uid": "atout-reseau", "icon": "network", "title": "Réseau international", "text": "Un accès à des partenaires, experts et investisseurs européens." },
-        { "component": "card", "_uid": "atout-long-terme", "icon": "long-term", "title": "Vision de long terme", "text": "Nous privilégions une création de valeur durable plutôt que des résultats à court terme." }
+        {
+          "component": "card",
+          "_uid": "atout-expertise",
+          "icon": "expertise",
+          "title": "Expertise sectorielle",
+          "text": "Une spécialisation exclusive dans le secteur de la santé."
+        },
+        {
+          "component": "card",
+          "_uid": "atout-terrain",
+          "icon": "field",
+          "title": "Expérience de terrain",
+          "text": "Une compréhension concrète des défis rencontrés par les PME de santé."
+        },
+        {
+          "component": "card",
+          "_uid": "atout-reseau",
+          "icon": "network",
+          "title": "Réseau international",
+          "text": "Un accès à des partenaires, experts et investisseurs européens."
+        },
+        {
+          "component": "card",
+          "_uid": "atout-long-terme",
+          "icon": "long-term",
+          "title": "Vision de long terme",
+          "text": "Nous privilégions une création de valeur durable plutôt que des résultats à court terme."
+        }
       ]
     },
     {
@@ -127,9 +242,7 @@
       "intro": "Vous envisagez :",
       "items": "Une transmission\nUne vente\nUne recherche de financement\nUn projet de développement",
       "text": "UBORA CAPITAL PARTNER vous accompagne dans chaque étape de votre projet.",
-      "closing": "Parlons ensemble de l'avenir de votre établissement.",
-      "show_form": true,
-      "form_subjects": "Transmission\nVente\nRecherche de financement\nProjet de développement\nProposer une opportunité\nAutre demande"
+      "closing": "Parlons ensemble de l'avenir de votre établissement."
     }
   ]
 }

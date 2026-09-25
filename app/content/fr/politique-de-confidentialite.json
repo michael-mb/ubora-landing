@@ -294,7 +294,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "Lorsque vous nous contactez par le formulaire, par e-mail ou par téléphone, nous traitons les données que vous nous communiquez (nom, établissement, coordonnées, objet et contenu du message) afin de traiter votre demande et d'y répondre."
+                "text": "Lorsque vous nous contactez par e-mail ou par téléphone, nous traitons les données que vous nous communiquez (nom, coordonnées, contenu de votre message) afin de traiter votre demande et d'y répondre."
               }
             ]
           },
@@ -303,16 +303,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "Base légale : art. 6, par. 1, point b) du RGPD lorsque votre demande est liée à un projet de collaboration ou à des mesures précontractuelles, et art. 6, par. 1, point a) du RGPD (consentement) dans les autres cas. Vous pouvez retirer votre consentement à tout moment."
-              }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "content": [
-              {
-                "type": "text",
-                "text": "Les messages envoyés via le formulaire nous sont transmis par e-mail au moyen du service Brevo (Sendinblue SAS, Paris, France), dans le cadre de son accord de traitement des données (art. 28 RGPD). Les données sont traitées dans l'Union européenne et ne sont pas utilisées à d'autres fins."
+                "text": "Base légale : art. 6, par. 1, point b) du RGPD lorsque votre demande est liée à un projet de collaboration ou à des mesures précontractuelles, et art. 6, par. 1, point f) du RGPD (intérêt légitime à répondre aux demandes qui nous sont adressées) dans les autres cas."
               }
             ]
           },
@@ -342,7 +333,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "Vos données ne sont ni vendues ni cédées à des tiers. Elles ne sont communiquées qu'aux prestataires nécessaires au fonctionnement du site (hébergement, gestion de contenu, envoi d'e-mails), dans le cadre de contrats de sous-traitance. Si une demande concerne un projet au Cameroun, les informations peuvent être partagées avec notre équipe sur place, dans la mesure nécessaire au traitement de votre demande."
+                "text": "Vos données ne sont ni vendues ni cédées à des tiers. Elles ne sont communiquées qu'aux prestataires nécessaires au fonctionnement du site (hébergement, gestion de contenu), dans le cadre de contrats de sous-traitance. Si une demande concerne un projet au Cameroun, les informations peuvent être partagées avec notre équipe sur place, dans la mesure nécessaire au traitement de votre demande."
               }
             ]
           },

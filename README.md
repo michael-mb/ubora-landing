@@ -40,7 +40,7 @@ public/brand/           SVG logos extracted from the presentation, Open Graph im
 | `feature-list` | Title, intro, one or more `list-group` (checkmarks, numbers, bullets), conclusion |
 | `card-grid` | Grid of `card` with icon |
 | `steps` | Steps (`step`) + conclusion box |
-| `cta-section` | Call to action + contact form |
+| `cta-section` | Call to action + contact details |
 | `button`, `nav-link`, `list-group`, `card`, `step` | Nested elements |
 
 « List » fields are textareas with **one item per line**, which is easier for the client to edit.
@@ -77,7 +77,7 @@ Append `/editor.html` to any page URL to open that page in the Storyblok editor:
 The site is bilingual: `/` in French, `/en` in English, with an FR / EN switcher in the header.
 
 - **Content**: field-level translation in Storyblok (one story per page). Text fields are translatable; anchors, email and phone are shared between languages.
-- **UI strings** (form, footer, menu, 404 page): `app/i18n/messages.ts`.
+- **UI strings** (contact card, footer, menu, 404 page): `app/i18n/messages.ts`.
 - **Local content** (without Storyblok): `app/content/fr/` and `app/content/en/`.
 - Internal links are automatically prefixed with `/en` on the English version.
 
@@ -97,19 +97,9 @@ In Storyblok: *Content → Create new → Story*, type **Page**, slug `a-propos`
 3. Add it to `sectionPages` so it is allowed in pages.
 4. Run `npm run storyblok:setup` to push the schema.
 
-## Contact form
+## Contact
 
-Submissions are posted to `server/api/contact.post.ts`, which sends an email through [Brevo](https://www.brevo.com) (free plan: 300 emails/day, EU-based). Replying to the email answers the visitor directly.
-
-1. Create a free Brevo account.
-2. *Senders, domains & dedicated IPs → Senders*: add and verify `ubora.cp@outlook.de` (Brevo sends a confirmation email).
-3. *SMTP & API → API keys*: create a key.
-4. Set the environment variables (in `.env` locally, in Vercel for production):
-   - `NUXT_BREVO_API_KEY`: the API key
-   - `NUXT_CONTACT_TO`: recipient (default `ubora.cp@outlook.de`)
-   - `NUXT_CONTACT_FROM`: verified sender (default: same as the recipient)
-
-Without an API key, the form falls back to opening the visitor's mail client with a prefilled message.
+The contact section shows the phone number, email and locations from the **config** story as clickable links (`tel:` / `mailto:`). There is no contact form.
 
 ## Deployment
 
@@ -127,7 +117,6 @@ On **Vercel**, import the GitHub repository (Nuxt is detected automatically) and
 | `NUXT_STORYBLOK_REGION` | `eu` | `eu` |
 | `NUXT_PUBLIC_STORYBLOK_VERSION` | `published` | `draft` |
 | `NUXT_PUBLIC_SITE_URL` | site URL | — |
-| `NUXT_BREVO_API_KEY` | Brevo API key | Brevo API key |
 
 Never deploy `STORYBLOK_PERSONAL_TOKEN`: it is only used by the local setup script. Published content appears without redeploying; changing an environment variable requires a redeploy.
 
