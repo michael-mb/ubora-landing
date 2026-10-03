@@ -24,17 +24,14 @@ defineProps<{ blok: Record<string, any> }>()
 <style scoped>
 .team__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
-  gap: clamp(1.25rem, 2.5vw, 2rem);
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(0.9rem, 2.5vw, 2rem);
   margin-top: clamp(2.5rem, 5vw, 3.5rem);
 }
 
-.team__grid > li { display: flex; }
-
-@media (max-width: 559px) {
-  .team__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.9rem;
-  }
+@media (min-width: 900px) {
+  .team__grid { grid-template-columns: repeat(3, 1fr); }
 }
+
+.team__grid > li { display: flex; }
 </style>
