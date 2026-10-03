@@ -234,6 +234,23 @@
       "theme": "yellow"
     },
     {
+      "component": "testimonials",
+      "_uid": "temoignages",
+      "anchor": "temoignages",
+      "eyebrow": "Testimonials",
+      "title": "They trust us",
+      "theme": "cream",
+      "items": [
+        {
+          "component": "testimonial",
+          "_uid": "temoignage-aristide-njambou",
+          "quote": "[Testimonial to be completed: text by Aristide Njambou]",
+          "name": "Aristide Njambou",
+          "role": "CEO of Global Invest"
+        }
+      ]
+    },
+    {
       "component": "cta-section",
       "_uid": "contact",
       "anchor": "contact",

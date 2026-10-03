@@ -9,7 +9,7 @@ const TOKEN = process.env.STORYBLOK_PERSONAL_TOKEN
 const REGION = process.env.NUXT_STORYBLOK_REGION || 'eu'
 const FORCE = process.argv.includes('--force')
 const TRANSLATION_LANG = 'en'
-const NOT_TRANSLATABLE = new Set(['anchor', 'phone', 'email', 'site_name'])
+const NOT_TRANSLATABLE = new Set(['anchor', 'phone', 'email', 'site_name', 'name'])
 const TRANSLATABLE_TYPES = new Set(['text', 'textarea', 'richtext'])
 const schemas = Object.fromEntries(components.map(c => [c.name, c.schema]))
 

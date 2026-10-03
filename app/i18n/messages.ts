@@ -27,6 +27,11 @@ export const messages = {
       genericText: 'Merci de réessayer dans quelques instants.',
       backHome: 'Retour à l’accueil',
     },
+    testimonials: {
+      region: 'Témoignages',
+      previous: 'Témoignage précédent',
+      next: 'Témoignage suivant',
+    },
     contactCard: {
       title: 'Nous contacter',
       phone: 'Téléphone',
@@ -62,6 +67,11 @@ export const messages = {
       genericTitle: 'Something went wrong.',
       genericText: 'Please try again in a few moments.',
       backHome: 'Back to home',
+    },
+    testimonials: {
+      region: 'Testimonials',
+      previous: 'Previous testimonial',
+      next: 'Next testimonial',
     },
     contactCard: {
       title: 'Get in touch',

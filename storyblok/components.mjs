@@ -27,7 +27,7 @@ const iconField = {
   ].map(value => ({ name: value, value })),
 }
 
-const sectionPages = ['hero', 'page-header', 'text-section', 'rich-text', 'feature-list', 'card-grid', 'steps', 'cta-section']
+const sectionPages = ['hero', 'page-header', 'text-section', 'rich-text', 'feature-list', 'card-grid', 'steps', 'testimonials', 'cta-section']
 
 export const groups = ['Pages', 'Sections', 'Éléments']
 
@@ -158,6 +158,20 @@ export const components = [
     },
   },
   {
+    name: 'testimonials',
+    display_name: 'Témoignages',
+    group: 'Sections',
+    is_nestable: true,
+    schema: {
+      anchor: anchorField,
+      eyebrow: { type: 'text', display_name: 'Sur-titre' },
+      title: { type: 'text', display_name: 'Titre' },
+      intro: { type: 'textarea', display_name: 'Introduction' },
+      items: { type: 'bloks', display_name: 'Témoignages', restrict_components: true, component_whitelist: ['testimonial'] },
+      theme: themeField,
+    },
+  },
+  {
     name: 'cta-section',
     display_name: 'Appel à l’action / Contact',
     group: 'Sections',
@@ -244,6 +258,17 @@ export const components = [
       title: { type: 'text', display_name: 'Titre' },
       intro: { type: 'text', display_name: 'Introduction' },
       items: { type: 'textarea', display_name: 'Éléments (un par ligne)' },
+    },
+  },
+  {
+    name: 'testimonial',
+    display_name: 'Témoignage',
+    group: 'Éléments',
+    is_nestable: true,
+    schema: {
+      quote: { type: 'textarea', display_name: 'Témoignage' },
+      name: { type: 'text', display_name: 'Nom' },
+      role: { type: 'text', display_name: 'Fonction / entreprise' },
     },
   },
 ]
