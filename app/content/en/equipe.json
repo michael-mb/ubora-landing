@@ -1,0 +1,49 @@
+{
+  "component": "page",
+  "_uid": "page-equipe",
+  "seo_title": "Our team — UBORA CAPITAL PARTNER",
+  "seo_description": "The UBORA CAPITAL PARTNER team, between Germany and Cameroon.",
+  "body": [
+    {
+      "component": "page-header",
+      "_uid": "header",
+      "eyebrow": "Our team",
+      "title": "The people behind Ubora",
+      "intro": "A team between Germany and Cameroon, combining financial expertise, knowledge of the healthcare sector and field experience."
+    },
+    {
+      "component": "team-grid",
+      "_uid": "team",
+      "anchor": "equipe",
+      "eyebrow": "Team",
+      "title": "A committed team at your side",
+      "theme": "light",
+      "members": [
+        {
+          "component": "team-member",
+          "_uid": "member-1",
+          "name": "Aristide Tonfack",
+          "role": "CEO"
+        },
+        {
+          "component": "team-member",
+          "_uid": "member-2",
+          "name": "Prénom Nom",
+          "role": "Investment Director (example)"
+        },
+        {
+          "component": "team-member",
+          "_uid": "member-3",
+          "name": "Prénom Nom",
+          "role": "Head of Operations (example)"
+        },
+        {
+          "component": "team-member",
+          "_uid": "member-4",
+          "name": "Prénom Nom",
+          "role": "Head of Cameroon (example)"
+        }
+      ]
+    }
+  ]
+}

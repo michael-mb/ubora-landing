@@ -3,22 +3,95 @@
   "_uid": "config",
   "site_name": "UBORA CAPITAL PARTNER",
   "navigation": [
-    { "component": "nav-link", "_uid": "nav-vision", "label": "Vision", "link": { "linktype": "url", "url": "/#vision", "cached_url": "/#vision" } },
-    { "component": "nav-link", "_uid": "nav-domaines", "label": "Domaines", "link": { "linktype": "url", "url": "/#domaines", "cached_url": "/#domaines" } },
-    { "component": "nav-link", "_uid": "nav-approche", "label": "Approche", "link": { "linktype": "url", "url": "/#approche", "cached_url": "/#approche" } },
-    { "component": "nav-link", "_uid": "nav-strategie", "label": "Stratégie", "link": { "linktype": "url", "url": "/#strategie", "cached_url": "/#strategie" } },
-    { "component": "nav-link", "_uid": "nav-pourquoi", "label": "Pourquoi Ubora", "link": { "linktype": "url", "url": "/#pourquoi", "cached_url": "/#pourquoi" } }
+    {
+      "component": "nav-link",
+      "_uid": "nav-domaines",
+      "label": "Domaines",
+      "link": {
+        "linktype": "url",
+        "url": "/#domaines",
+        "cached_url": "/#domaines"
+      }
+    },
+    {
+      "component": "nav-link",
+      "_uid": "nav-approche",
+      "label": "Approche",
+      "link": {
+        "linktype": "url",
+        "url": "/#approche",
+        "cached_url": "/#approche"
+      }
+    },
+    {
+      "component": "nav-link",
+      "_uid": "nav-strategie",
+      "label": "Stratégie",
+      "link": {
+        "linktype": "url",
+        "url": "/#strategie",
+        "cached_url": "/#strategie"
+      }
+    },
+    {
+      "component": "nav-link",
+      "_uid": "nav-pourquoi",
+      "label": "Pourquoi Ubora",
+      "link": {
+        "linktype": "url",
+        "url": "/#pourquoi",
+        "cached_url": "/#pourquoi"
+      }
+    },
+    {
+      "component": "nav-link",
+      "_uid": "nav-equipe",
+      "label": "Équipe",
+      "link": {
+        "linktype": "url",
+        "url": "/equipe",
+        "cached_url": "/equipe"
+      }
+    }
   ],
   "header_cta": [
-    { "component": "button", "_uid": "header-cta", "label": "Nous contacter", "variant": "primary", "link": { "linktype": "url", "url": "/#contact", "cached_url": "/#contact" } }
+    {
+      "component": "button",
+      "_uid": "header-cta",
+      "label": "Nous contacter",
+      "variant": "primary",
+      "link": {
+        "linktype": "url",
+        "url": "/#contact",
+        "cached_url": "/#contact"
+      }
+    }
   ],
   "legal_links": [
-    { "component": "nav-link", "_uid": "legal-mentions", "label": "Mentions légales", "link": { "linktype": "url", "url": "/mentions-legales", "cached_url": "/mentions-legales" } },
-    { "component": "nav-link", "_uid": "legal-privacy", "label": "Politique de confidentialité", "link": { "linktype": "url", "url": "/politique-de-confidentialite", "cached_url": "/politique-de-confidentialite" } }
+    {
+      "component": "nav-link",
+      "_uid": "legal-mentions",
+      "label": "Mentions légales",
+      "link": {
+        "linktype": "url",
+        "url": "/mentions-legales",
+        "cached_url": "/mentions-legales"
+      }
+    },
+    {
+      "component": "nav-link",
+      "_uid": "legal-privacy",
+      "label": "Politique de confidentialité",
+      "link": {
+        "linktype": "url",
+        "url": "/politique-de-confidentialite",
+        "cached_url": "/politique-de-confidentialite"
+      }
+    }
   ],
   "tagline": "Investir dans la santé. Préserver les entreprises. Construire l'avenir.",
   "footer_text": "Holding d'investissement spécialisée dans le secteur de la santé en Afrique centrale.",
   "locations": "Allemagne · Cameroun",
   "phone": "+49 176 75892256",
-  "email": "ubora.cp@outlook.de"
+  "email": "info@ubora-capital.com"
 }

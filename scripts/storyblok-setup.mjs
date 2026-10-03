@@ -9,6 +9,8 @@ const TOKEN = process.env.STORYBLOK_PERSONAL_TOKEN
 const REGION = process.env.NUXT_STORYBLOK_REGION || 'eu'
 const FORCE = process.argv.includes('--force')
 const COMPONENTS_ONLY = process.argv.includes('--components-only')
+const SYNC_MENU = process.argv.includes('--sync-menu')
+const ONLY = process.argv.find(arg => arg.startsWith('--only='))?.slice('--only='.length).split(',').filter(Boolean)
 const TRANSLATION_LANG = 'en'
 const NOT_TRANSLATABLE = new Set(['anchor', 'phone', 'email', 'site_name', 'name'])
 const TRANSLATABLE_TYPES = new Set(['text', 'textarea', 'richtext'])
@@ -129,7 +131,18 @@ async function setupComponents(groupUuids) {
   }
 }
 
+async function syncMenu() {
+  const [fr, en] = await Promise.all([readContent('fr', 'config.json'), readContent(TRANSLATION_LANG, 'config.json')])
+  const { stories } = await api('GET', '/stories?with_slug=config')
+  if (!stories[0]) throw new Error('Story « config » introuvable : lancez d\'abord npm run storyblok:setup')
+  const { story } = await api('GET', `/stories/${stories[0].id}`)
+  const navigation = withTranslations(withUids(fr.navigation), en.navigation)
+  await api('PUT', `/stories/${stories[0].id}`, { story: { content: { ...story.content, navigation } }, force_update: 1 })
+  console.log(`  ↻ menu remplacé (${fr.navigation.map(item => item.label).join(', ')}), enregistré en brouillon : à publier dans Storyblok`)
+}
+
 async function setupStory({ name, slug, file, path }) {
+  if (ONLY && !ONLY.includes(slug)) return
   const translated = await readContent(TRANSLATION_LANG, file)
   const { stories } = await api('GET', `/stories?with_slug=${slug}`)
   const current = stories[0]
@@ -161,6 +174,11 @@ try {
   const groupUuids = await setupGroups()
   console.log('→ Blocs')
   await setupComponents(groupUuids)
+  if (SYNC_MENU) {
+    console.log('→ Menu')
+    await syncMenu()
+    process.exit(0)
+  }
   if (COMPONENTS_ONLY) {
     console.log('✔ Blocs à jour (stories non modifiées)')
     process.exit(0)
@@ -169,6 +187,7 @@ try {
   await setupStory({ name: 'Accueil', slug: 'home', file: 'home.json', path: '/' })
   await setupStory({ name: 'Mentions légales', slug: 'mentions-legales', file: 'mentions-legales.json' })
   await setupStory({ name: 'Politique de confidentialité', slug: 'politique-de-confidentialite', file: 'politique-de-confidentialite.json' })
+  await setupStory({ name: 'Notre équipe', slug: 'equipe', file: 'equipe.json' })
   await setupStory({ name: 'Configuration du site', slug: 'config', file: 'config.json' })
   console.log('✔ Terminé')
 }

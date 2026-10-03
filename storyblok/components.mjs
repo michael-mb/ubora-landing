@@ -27,7 +27,7 @@ const iconField = {
   ].map(value => ({ name: value, value })),
 }
 
-const sectionPages = ['hero', 'page-header', 'text-section', 'rich-text', 'feature-list', 'card-grid', 'steps', 'testimonials', 'cta-section']
+const sectionPages = ['hero', 'page-header', 'text-section', 'rich-text', 'feature-list', 'card-grid', 'steps', 'testimonials', 'team-grid', 'cta-section']
 
 export const groups = ['Pages', 'Sections', 'Éléments']
 
@@ -172,6 +172,20 @@ export const components = [
     },
   },
   {
+    name: 'team-grid',
+    display_name: 'Équipe',
+    group: 'Sections',
+    is_nestable: true,
+    schema: {
+      anchor: anchorField,
+      eyebrow: { type: 'text', display_name: 'Sur-titre' },
+      title: { type: 'text', display_name: 'Titre' },
+      intro: { type: 'textarea', display_name: 'Introduction' },
+      members: { type: 'bloks', display_name: 'Membres', restrict_components: true, component_whitelist: ['team-member'] },
+      theme: themeField,
+    },
+  },
+  {
     name: 'cta-section',
     display_name: 'Appel à l’action / Contact',
     group: 'Sections',
@@ -275,6 +289,22 @@ export const components = [
         description: 'Portrait carré de préférence. Sans photo, les initiales sont affichées.',
         filetypes: ['images'],
       },
+    },
+  },
+  {
+    name: 'team-member',
+    display_name: 'Membre de l’équipe',
+    group: 'Éléments',
+    is_nestable: true,
+    schema: {
+      photo: {
+        type: 'asset',
+        display_name: 'Photo',
+        description: 'Portrait vertical ou carré. Sans photo, les initiales sont affichées.',
+        filetypes: ['images'],
+      },
+      name: { type: 'text', display_name: 'Nom' },
+      role: { type: 'text', display_name: 'Fonction' },
     },
   },
 ]

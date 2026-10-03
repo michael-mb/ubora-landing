@@ -1,24 +1,8 @@
 <script setup lang="ts">
 const props = defineProps<{ blok: Record<string, any> }>()
 const paragraphs = computed(() => toLines(props.blok.quote))
-const initials = computed(() =>
-  String(props.blok.name ?? '')
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map(word => word[0]?.toUpperCase())
-    .join(''),
-)
-
-const photo = computed(() => {
-  const url: string | undefined = props.blok.photo?.filename
-  if (!url) return undefined
-  const resizable = url.includes('storyblok.com') && !url.endsWith('.svg')
-  return {
-    src: resizable ? `${url}/m/120x120/smart` : url,
-    srcset: resizable ? `${url}/m/120x120/smart 1x, ${url}/m/240x240/smart 2x` : undefined,
-  }
-})
+const initials = computed(() => initialsOf(props.blok.name))
+const photo = computed(() => personPhoto(props.blok.photo, 60))
 </script>
 
 <template>

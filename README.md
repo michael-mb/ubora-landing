@@ -40,6 +40,8 @@ public/brand/           SVG logos extracted from the presentation, Open Graph im
 | `feature-list` | Title, intro, one or more `list-group` (checkmarks, numbers, bullets), conclusion |
 | `card-grid` | Grid of `card` with icon |
 | `steps` | Steps (`step`) + conclusion box |
+| `testimonials` / `testimonial` | Horizontally scrollable testimonials (quote, name, role, optional photo) |
+| `team-grid` / `team-member` | Team grid (photo, name, role) — used on `/equipe` |
 | `cta-section` | Call to action + contact details |
 | `button`, `nav-link`, `list-group`, `card`, `step` | Nested elements |
 
@@ -85,6 +87,14 @@ Enabling English in Storyblok:
 1. *Settings → Internationalization → Add language*: English, code **`en`**.
 2. `npm run storyblok:setup` (without `--force`): adds the English translations to existing stories without touching the French content. They are saved as drafts.
 3. Review and publish each story in Storyblok. In the editor, the language switcher at the top lets you move to the English version.
+
+### Storyblok commands
+
+```bash
+npm run storyblok:components              # push block schemas only (no content touched)
+npm run storyblok:menu                    # replace only the config menu (saved as draft)
+npm run storyblok:setup -- --only=equipe  # create the given stories if missing
+```
 
 ### Adding a page
 

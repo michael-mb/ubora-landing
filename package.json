@@ -10,7 +10,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "storyblok:setup": "node --env-file=.env scripts/storyblok-setup.mjs",
-    "storyblok:components": "node --env-file=.env scripts/storyblok-setup.mjs --components-only"
+    "storyblok:components": "node --env-file=.env scripts/storyblok-setup.mjs --components-only",
+    "storyblok:menu": "node --env-file=.env scripts/storyblok-setup.mjs --sync-menu"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.14.0",

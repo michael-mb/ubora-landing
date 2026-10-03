@@ -123,8 +123,10 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
   transition: transform 0.25s ease;
 }
 
-.header__nav :deep(.nav-link:hover) { color: #fff; }
-.header__nav :deep(.nav-link:hover)::after { transform: scaleX(1); }
+.header__nav :deep(.nav-link:hover),
+.header__nav :deep(.nav-link.is-active) { color: #fff; }
+.header__nav :deep(.nav-link:hover)::after,
+.header__nav :deep(.nav-link.is-active)::after { transform: scaleX(1); }
 
 .header__nav :deep(.btn) { min-height: 44px; padding: 0.6rem 1.3rem; }
 

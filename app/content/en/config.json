@@ -5,16 +5,6 @@
   "navigation": [
     {
       "component": "nav-link",
-      "_uid": "nav-vision",
-      "label": "Vision",
-      "link": {
-        "linktype": "url",
-        "url": "/#vision",
-        "cached_url": "/#vision"
-      }
-    },
-    {
-      "component": "nav-link",
       "_uid": "nav-domaines",
       "label": "Sectors",
       "link": {
@@ -51,6 +41,16 @@
         "linktype": "url",
         "url": "/#pourquoi",
         "cached_url": "/#pourquoi"
+      }
+    },
+    {
+      "component": "nav-link",
+      "_uid": "nav-equipe",
+      "label": "Team",
+      "link": {
+        "linktype": "url",
+        "url": "/equipe",
+        "cached_url": "/equipe"
       }
     }
   ],
@@ -93,5 +93,5 @@
   "footer_text": "Investment holding company specialising in the healthcare sector in Central Africa.",
   "locations": "Germany · Cameroon",
   "phone": "+49 176 75892256",
-  "email": "ubora.cp@outlook.de"
+  "email": "info@ubora-capital.com"
 }
