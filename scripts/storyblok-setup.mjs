@@ -8,6 +8,7 @@ const SPACE_ID = process.env.STORYBLOK_SPACE_ID
 const TOKEN = process.env.STORYBLOK_PERSONAL_TOKEN
 const REGION = process.env.NUXT_STORYBLOK_REGION || 'eu'
 const FORCE = process.argv.includes('--force')
+const COMPONENTS_ONLY = process.argv.includes('--components-only')
 const TRANSLATION_LANG = 'en'
 const NOT_TRANSLATABLE = new Set(['anchor', 'phone', 'email', 'site_name', 'name'])
 const TRANSLATABLE_TYPES = new Set(['text', 'textarea', 'richtext'])
@@ -160,6 +161,10 @@ try {
   const groupUuids = await setupGroups()
   console.log('→ Blocs')
   await setupComponents(groupUuids)
+  if (COMPONENTS_ONLY) {
+    console.log('✔ Blocs à jour (stories non modifiées)')
+    process.exit(0)
+  }
   console.log('→ Stories')
   await setupStory({ name: 'Accueil', slug: 'home', file: 'home.json', path: '/' })
   await setupStory({ name: 'Mentions légales', slug: 'mentions-legales', file: 'mentions-legales.json' })

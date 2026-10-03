@@ -9,7 +9,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "storyblok:setup": "node --env-file=.env scripts/storyblok-setup.mjs"
+    "storyblok:setup": "node --env-file=.env scripts/storyblok-setup.mjs",
+    "storyblok:components": "node --env-file=.env scripts/storyblok-setup.mjs --components-only"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.14.0",

@@ -269,6 +269,12 @@ export const components = [
       quote: { type: 'textarea', display_name: 'Témoignage' },
       name: { type: 'text', display_name: 'Nom' },
       role: { type: 'text', display_name: 'Fonction / entreprise' },
+      photo: {
+        type: 'asset',
+        display_name: 'Photo (facultatif)',
+        description: 'Portrait carré de préférence. Sans photo, les initiales sont affichées.',
+        filetypes: ['images'],
+      },
     },
   },
 ]
