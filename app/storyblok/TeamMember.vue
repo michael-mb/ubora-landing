@@ -2,10 +2,17 @@
 const props = defineProps<{ blok: Record<string, any> }>()
 const initials = computed(() => initialsOf(props.blok.name))
 const photo = computed(() => personPhoto(props.blok.photo, 400, 500))
+const { t, localePath } = useLocale()
+
+const href = computed(() => {
+  const url = linkHref(props.blok.link)
+  return url && url !== '#' ? localePath(url) : undefined
+})
+const isExternal = computed(() => Boolean(href.value && /^https?:\/\//.test(href.value)))
 </script>
 
 <template>
-  <article v-editable="blok" class="member">
+  <article v-editable="blok" class="member" :class="{ 'member--linked': href }">
     <div class="member__picture">
       <img
         v-if="photo"
@@ -25,12 +32,24 @@ const photo = computed(() => personPhoto(props.blok.photo, 400, 500))
     <div class="member__body">
       <h3 class="member__name">{{ blok.name }}</h3>
       <p v-if="blok.role" class="member__role">{{ blok.role }}</p>
+      <NuxtLink
+        v-if="href"
+        :to="href"
+        class="member__link"
+        :target="isExternal ? '_blank' : blok.link?.target"
+        :external="isExternal"
+      >
+        {{ blok.link_label || t.team.viewProfile }}
+        <BrandIcon name="arrow" />
+        <span class="visually-hidden">— {{ blok.name }}<template v-if="isExternal"> {{ t.team.newTab }}</template></span>
+      </NuxtLink>
     </div>
   </article>
 </template>
 
 <style scoped>
 .member {
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -100,7 +119,42 @@ const photo = computed(() => personPhoto(props.blok.photo, 400, 500))
   color: var(--section-muted);
 }
 
+.member__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--brown);
+  text-decoration: none;
+}
+
+.member__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.member__link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.member--linked:hover .member__link svg { transform: translateX(3px); }
+.member--linked:hover .member__name { color: var(--gold-text); }
+
+.member:has(.member__link:focus-visible) {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+.member__link:focus-visible { outline: none; }
+
 @media (max-width: 559px) {
+  .member__link { font-size: 0.875rem; }
   .member__body { padding: 0.9rem 1rem 1.1rem; }
   .member__name { font-size: 1rem; }
   .member__role { font-size: 0.875rem; }

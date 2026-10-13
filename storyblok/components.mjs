@@ -305,6 +305,8 @@ export const components = [
       },
       name: { type: 'text', display_name: 'Nom' },
       role: { type: 'text', display_name: 'Fonction' },
+      link: { type: 'multilink', display_name: 'Lien (facultatif)', description: 'Page externe (LinkedIn, site…) ou page du site. Toute la carte devient cliquable.' },
+      link_label: { type: 'text', display_name: 'Texte du lien (facultatif)', description: 'Par défaut : « Voir le profil »' },
     },
   },
 ]

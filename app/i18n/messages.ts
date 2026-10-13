@@ -27,6 +27,10 @@ export const messages = {
       genericText: 'Merci de réessayer dans quelques instants.',
       backHome: 'Retour à l’accueil',
     },
+    team: {
+      viewProfile: 'Voir le profil',
+      newTab: '(s’ouvre dans un nouvel onglet)',
+    },
     testimonials: {
       region: 'Témoignages',
       previous: 'Témoignage précédent',
@@ -67,6 +71,10 @@ export const messages = {
       genericTitle: 'Something went wrong.',
       genericText: 'Please try again in a few moments.',
       backHome: 'Back to home',
+    },
+    team: {
+      viewProfile: 'View profile',
+      newTab: '(opens in a new tab)',
     },
     testimonials: {
       region: 'Testimonials',
